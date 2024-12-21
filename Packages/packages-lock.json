@@ -7,13 +7,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.devlab.chipmunklibrary": {
-      "version": "https://github.com/Chipmunk-Rex/Chipmunk-Library.git?path=/ChipmunkLibrary",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "fae8cf2b056efdd91d9f307816ba31eae09a6d24"
-    },
     "com.unity.2d.animation": {
       "version": "10.1.3",
       "depth": 1,
