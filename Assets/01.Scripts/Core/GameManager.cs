@@ -1,6 +1,6 @@
 public class GameManager : MonoSingleton<GameManager>
 {
-    public CameraManager cameraManager;
+    public CameraManager CameraManager;
     public void DestoryManager()
     {
         Destroy(gameObject);
