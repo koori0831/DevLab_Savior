@@ -1,6 +1,4 @@
 using UnityEngine;
-using static UnityEngine.EventSystems.EventTrigger;
-using UnityEngine.UIElements;
 using System;
 
 public class PlayerMover : MonoBehaviour
@@ -28,7 +26,7 @@ public class PlayerMover : MonoBehaviour
     }
     public void SetMoveSpeedMultiplier(float value) => _moveSpeedMultiplier = value;
 
-    public void AddForceToEntity(Vector2 force)
+    public void AddForceToPlayer(Vector2 force)
     {
         _rbCompo.AddForce(force, ForceMode2D.Impulse);
     }
