@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Wall
   - Player
-  - 
+  - Bullet
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 2209093969
+    locked: 0
+  - name: Bullet
+    uniqueID: 1877241293
     locked: 0
   - name: Player
     uniqueID: 1402236681

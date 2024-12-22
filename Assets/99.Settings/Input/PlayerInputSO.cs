@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 [CreateAssetMenu(fileName = "PlayerInputSO", menuName = "SO/PlayerInputSO")]
 public class PlayerInputSO : ScriptableObject, Controls.IPlayerActions
 {
-    public event Action<Vector2> AttackEvent;
+    public event Action AttackEvent;
 
     public Vector2 InputDirection { get; private set; }
 
@@ -28,7 +28,7 @@ public class PlayerInputSO : ScriptableObject, Controls.IPlayerActions
     {
         if (context.performed)
         {
-            AttackEvent?.Invoke(context.ReadValue<Vector2>());
+            AttackEvent?.Invoke();
         }
     }
 
