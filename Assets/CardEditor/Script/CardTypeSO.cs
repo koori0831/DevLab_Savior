@@ -4,5 +4,5 @@ using UnityEngine;
 public class CardTypeSO : ScriptableObject
 {
     [SerializeField] public string typeName;
-    [SerializeField] public Color cardBorderColor;
+    [SerializeField] public Material cardMat;
 }
