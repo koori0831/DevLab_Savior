@@ -21,7 +21,7 @@ public class BtnEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        hoverSound.Play();  
+        //hoverSound.Play();  
         _text.transform.DORotate(new Vector3(0, 0, 5), 0.4f);
     }
 

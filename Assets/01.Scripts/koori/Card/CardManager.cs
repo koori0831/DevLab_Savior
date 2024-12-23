@@ -28,6 +28,11 @@ public class CardManager : MonoBehaviour
         chooseCardChannel.OnValueEvent += ChooseCardEventHandle;
     }
 
+    private void OnDestroy()
+    {
+        levelUpChannel.OnValueEvent -= LevelUpEventHandle;
+        chooseCardChannel.OnValueEvent -= ChooseCardEventHandle;
+    }
     private void ChooseCardEventHandle(bool obj)
     {
         if (!obj) return;
