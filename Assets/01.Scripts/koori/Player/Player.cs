@@ -3,9 +3,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] VoidEventChannelSO findPlayerEvent;
-    [SerializeField] Vector2EventChannelSO playerPosEvent;
+    [SerializeField] TransformEventChannel playerPosEvent;
     [SerializeField] Vector2EventChannelSO attackEventChannel;
     [SerializeField] PlayerInputSO playerInput;
+
+    [SerializeField] LayerMask expLayer;
+    [SerializeField] float expDetectRange;
+
+    private int _exp;
 
     private PlayerMover _mover;
 
@@ -29,7 +34,11 @@ public class Player : MonoBehaviour
     }
     private void HandleFindPlayerEvent()
     {
-        playerPosEvent.RaiseEvent(transform.position);
+        playerPosEvent.RaiseEvent(transform);
+    }
+    private void Update()
+    {
+        Physics2D.OverlapCircle(transform.position, expDetectRange, expLayer);
     }
 
     private void FixedUpdate()
@@ -48,5 +57,11 @@ public class Player : MonoBehaviour
         if (value)
             playerInput.Controls.Enable();
         else playerInput.Controls.Disable();
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, expDetectRange);
     }
 }
