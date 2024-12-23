@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class Enemy : MonoBehaviour, IPoolable
 {
-    [SerializeField] private Vector2EventChannelSO _playerPosEvent;
+    [SerializeField] private TransformEventChannel _playerPosEvent;
     [SerializeField] private VoidEventChannelSO _findPlayerEvent;
 
     [SerializeField] private float _speed;
@@ -27,7 +27,9 @@ public class Enemy : MonoBehaviour, IPoolable
     {
         RigidCompo = GetComponent<Rigidbody2D>();
 
-        //_playerPosEvent.OnEventRaised += SetTarget;
+        _playerPosEvent.OnEventRaised += SetTarget;
+
+        _findPlayerEvent.RaiseEvent();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,6 +39,11 @@ public class Enemy : MonoBehaviour, IPoolable
             OnReflectionEvent?.Invoke();
             DirectionToTarget(_player.transform.position);
         }
+    }
+
+    private void OnApplicationQuit()
+    {
+        _playerPosEvent.OnEventRaised -= SetTarget;
     }
 
     public void SetTarget(Transform player)
