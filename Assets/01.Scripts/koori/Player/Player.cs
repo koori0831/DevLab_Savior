@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -7,7 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] Vector2EventChannelSO attackEventChannel;
     [SerializeField] BoolEventChannelSO gameOverEventChannel;
     [SerializeField] PlayerInputSO playerInput;
-    
+
     [SerializeField] int expAdded = 5;
 
     [SerializeField] LayerMask expLayer;
@@ -18,6 +19,9 @@ public class Player : MonoBehaviour
 
     private PlayerMover _mover;
 
+    [SerializeField] Rigidbody2D rigidBody;
+    [SerializeField] MoveModerator moveModerator;
+
     private void Awake()
     {
         PlayerControl(true);
@@ -25,7 +29,16 @@ public class Player : MonoBehaviour
         findPlayerEvent.OnEventRaised += HandleFindPlayerEvent;
         playerInput.AttackEvent += HandleAttackEvent;
         _mover = GetComponent<PlayerMover>();
+
+        playerInput.InputDirection.OnvalueChanged += OnMove;
     }
+
+    private void OnMove(Vector2 prev, Vector2 next)
+    {
+        moveModerator.Initialize(rigidBody, next);
+        moveModerator.ExecuteEvent();
+    }
+
 
     private void OnDestroy()
     {
@@ -49,10 +62,10 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-        _mover.SetMovement(playerInput.InputDirection);
-    }
+    // private void FixedUpdate()
+    // {
+    //     _mover.SetMovement(playerInput.InputDirection);
+    // }
 
     public void AddExp(int value)
     {

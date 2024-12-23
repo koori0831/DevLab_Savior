@@ -7,7 +7,7 @@ public class PlayerInputSO : ScriptableObject, Controls.IPlayerActions
 {
     public event Action AttackEvent;
 
-    public Vector2 InputDirection { get; private set; }
+    public NotifyValue<Vector2> InputDirection { get; private set; }
 
     public Controls Controls;
     private void OnEnable()
@@ -34,6 +34,6 @@ public class PlayerInputSO : ScriptableObject, Controls.IPlayerActions
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        InputDirection = context.ReadValue<Vector2>();
+        InputDirection.Value = context.ReadValue<Vector2>();
     }
 }
