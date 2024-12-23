@@ -9,24 +9,36 @@ public class Bullet : MonoBehaviour
 
     private Vector2 _windowsPos;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb { get; private set; }
+    [SerializeField] private MoveModerator bulletMove;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        // PlayerInputSO.Instance.AttackEvent.OnvalueChanged(OnAttack);
         attackEventChannel.OnEventRaised += Move;
 
         WindowMove.Move(Screen.mainWindowPosition);
     }
 
+    // private void OnAttack(bool obj)
+    // {
+    //     if (obj)
+    //     {
+
+    //     }
+    // }
+
+
     private void Update()
     {
-            WindowMove.Move(_windowsPos);
+        WindowMove.Move(_windowsPos);
     }
 
     private void Move(Vector2 playerPos)
     {
-        rb.linearVelocity = (playerPos - (Vector2)transform.position).normalized * speed;
-        
+        Debug.Log("Move");  
+        bulletMove.Initialize(rb, (playerPos - (Vector2)transform.position).normalized);
+        bulletMove.ExecuteEvent();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -43,7 +55,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

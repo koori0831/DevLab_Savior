@@ -1,18 +1,20 @@
 using System;
+using Chipmunk.Library;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 [CreateAssetMenu(fileName = "PlayerInputSO", menuName = "SO/PlayerInputSO")]
-public class PlayerInputSO : ScriptableObject, Controls.IPlayerActions
+public class PlayerInputSO : ScriptableSingleton<PlayerInputSO>, Controls.IPlayerActions
 {
-    public event Action AttackEvent;
-    public event Action EscEvent;
+    public NotifyValue<bool> AttackEvent;
 
-    public Vector2 InputDirection { get; private set; }
+    public NotifyValue<Vector2> InputDirection { get; private set; }
 
     public Controls Controls;
-    private void OnEnable()
+    protected override void OnEnable()
     {
+        base.OnEnable();
+
         if (Controls == null)
         {
             Controls = new Controls();
@@ -28,15 +30,13 @@ public class PlayerInputSO : ScriptableObject, Controls.IPlayerActions
     public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.performed)
-        {
-            AttackEvent?.Invoke();
-        }
+            AttackEvent.Value = true;
+        if (context.canceled)
+            AttackEvent.Value = false;
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        InputDirection = context.ReadValue<Vector2>();
+        InputDirection.Value = context.ReadValue<Vector2>();
     }
-
-    
 }
