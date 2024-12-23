@@ -16,6 +16,7 @@ public class TimeUI : MonoBehaviour
         stopEvent.OnValueEvent += (bool value) => { _stop = value; };
     }
 
+
     private void Update()
     {
         if(!_stop) 

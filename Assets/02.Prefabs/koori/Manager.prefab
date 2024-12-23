@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff5aa475730d6a4fbcd3f86233d9dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _virtualCamera: {fileID: 0}
 --- !u!1 &2127730034089153182
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,5 +184,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0c79522803f8046bac231abf851589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  gameoverWindow: {fileID: 0}
+  gameOverUI: {fileID: 0}

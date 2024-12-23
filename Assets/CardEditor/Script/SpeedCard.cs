@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Card/SpeedCard")]
+[CreateAssetMenu(menuName = "Card/Normal/SpeedCard")]
 public class SpeedCard : CardSO
 {
     [SerializeField] MoveModerator moveModerator;

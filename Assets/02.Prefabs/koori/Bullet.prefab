@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEventChannel: {fileID: 11400000, guid: 27e60d32e9208624e919e7d7cd0f2d3a, type: 2}
   speed: 20
+  bulletMove: {fileID: 11400000, guid: 1cb33ee3ffe4c29418af559e5bd20023, type: 2}
 --- !u!114 &1574146401112644780
 MonoBehaviour:
   m_ObjectHideFlags: 0

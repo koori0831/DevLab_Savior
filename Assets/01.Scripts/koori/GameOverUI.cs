@@ -14,7 +14,6 @@ public class GameOverUI : MonoBehaviour
     {
         gameoverWindow = GetComponent<RectTransform>();
         gameoverAlpha = gameoverWindow.GetComponent<CanvasGroup>();
-        PopUp();
     }
     public void GameOver()
     {
