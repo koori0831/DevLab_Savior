@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerInputSO : ScriptableObject, Controls.IPlayerActions
 {
     public event Action AttackEvent;
+    public event Action EscEvent;
 
     public Vector2 InputDirection { get; private set; }
 
@@ -36,4 +37,6 @@ public class PlayerInputSO : ScriptableObject, Controls.IPlayerActions
     {
         InputDirection = context.ReadValue<Vector2>();
     }
+
+    
 }
