@@ -6,10 +6,13 @@ public class Player : MonoBehaviour
     [SerializeField] TransformEventChannel playerPosEvent;
     [SerializeField] Vector2EventChannelSO attackEventChannel;
     [SerializeField] PlayerInputSO playerInput;
+    
+    [SerializeField] int expAdded = 5;
 
     [SerializeField] LayerMask expLayer;
     [SerializeField] float expDetectRange;
 
+    public int Level { get; private set; }
     private int _exp;
 
     private PlayerMover _mover;
@@ -38,12 +41,27 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        Physics2D.OverlapCircle(transform.position, expDetectRange, expLayer);
+        Collider2D exp = Physics2D.OverlapCircle(transform.position, expDetectRange, expLayer);
+        if (exp != null)
+        {
+            Destroy(exp.gameObject);
+            AddExp(expAdded);
+        }
     }
 
     private void FixedUpdate()
     {
         _mover.SetMovement(playerInput.InputDirection);
+    }
+
+    public void AddExp(int value)
+    {
+        _exp += value;
+
+        for (; _exp >= 50; _exp -= 50)
+        {
+            Level++;
+        }
     }
 
     public void GameOver()
