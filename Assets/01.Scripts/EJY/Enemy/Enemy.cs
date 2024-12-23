@@ -46,6 +46,9 @@ public class Enemy : MonoBehaviour, IPoolable
             _findPlayerEvent.RaiseEvent();
         }
     }
+
+    public void SetPosition(Vector2 position) => transform.position = position;
+
     public void SetTarget(Vector2 target)
     {
         Vector2 dir = target - (Vector2)transform.position;
