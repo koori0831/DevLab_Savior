@@ -1,6 +1,14 @@
+using System;
 using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
+public enum EnemyType
+{
+    Melee,
+    Range,
+}
 
 public class Spawner : MonoBehaviour
 {
@@ -13,6 +21,8 @@ public class Spawner : MonoBehaviour
     private float _up;
     private float _down;
 
+    private int _enemiesCnt;
+
     private void Awake()
     {
         _cam = Camera.main;
@@ -21,6 +31,8 @@ public class Spawner : MonoBehaviour
         _left = _cam.ViewportToWorldPoint(Vector2.zero).x;
         _up = _cam.ViewportToWorldPoint(Vector2.one).y;
         _down = _cam.ViewportToWorldPoint(Vector2.zero).y;
+
+        _enemiesCnt = Enum.GetValues(typeof(EnemyType)).Length;
     }
 
     private void Start()
@@ -39,6 +51,8 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     {
+        EnemyType enemyType = (EnemyType)Random.Range(0, _enemiesCnt);
+
         bool xyFlag = (Random.value > 0.5f);
         bool zeroFlag = (Random.value > 0.5f);
 
@@ -66,7 +80,15 @@ public class Spawner : MonoBehaviour
 
         Vector2 position = new Vector2(x, y);
 
-        Enemy enemy = PoolManager.Instance.Pop("Enemy") as Enemy;
+        Enemy enemy = PoolManager.Instance.Pop($"{enemyType.ToString()}Enemy") as Enemy;
         enemy.SetPosition(position);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position, new Vector2(_right - _left, _up - _down));
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(transform.position, new Vector2((_right - _left) - 3, (_up - _down) - 3));
     }
 }
