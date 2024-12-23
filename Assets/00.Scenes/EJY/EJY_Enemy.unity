@@ -464,8 +464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277e752bb91a1ef46bb674b8abba6689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDontDestroy: 0
-  _poolList: {fileID: 0}
+  isDontDestroy: 1
+  _poolList: {fileID: 11400000, guid: 96266e2b493644148b8ffa418f6901b3, type: 2}
 --- !u!114 &1401006194 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8751942069995902941, guid: e3ff1c3b455390145b5e91a2e09b3916, type: 3}

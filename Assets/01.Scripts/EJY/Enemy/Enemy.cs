@@ -27,15 +27,7 @@ public class Enemy : MonoBehaviour, IPoolable
     {
         RigidCompo = GetComponent<Rigidbody2D>();
 
-        _playerPosEvent.OnEventRaised += SetTarget;
-    }
-
-    private void Update()
-    {
-        if (Keyboard.current.qKey.wasPressedThisFrame)
-        {
-            _findPlayerEvent.RaiseEvent();
-        }
+        //_playerPosEvent.OnEventRaised += SetTarget;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,13 +35,18 @@ public class Enemy : MonoBehaviour, IPoolable
         if (_isDead == false)
         {
             OnReflectionEvent?.Invoke();
-            _findPlayerEvent.RaiseEvent();
+            DirectionToTarget(_player.transform.position);
         }
+    }
+
+    public void SetTarget(Transform player)
+    {
+        _player = player.GetComponent<Player>();
     }
 
     public void SetPosition(Vector2 position) => transform.position = position;
 
-    public void SetTarget(Vector2 target)
+    public void DirectionToTarget(Vector2 target)
     {
         Vector2 dir = target - (Vector2)transform.position;
 

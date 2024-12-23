@@ -68,6 +68,5 @@ public class Spawner : MonoBehaviour
 
         Enemy enemy = PoolManager.Instance.Pop("Enemy") as Enemy;
         enemy.SetPosition(position);
-
     }
 }
