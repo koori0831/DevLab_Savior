@@ -3,6 +3,7 @@ using UnityEngine;
 public abstract class CardSO : ScriptableObject
 {
     [SerializeField] public Sprite cardIcon;
+    [SerializeField] public CardTypeSO cardType;
     [SerializeField] public string cardName;
     [SerializeField] public string cardDescription;
     public abstract void OnEquip(Player player);
