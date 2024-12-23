@@ -5,16 +5,8 @@ public class DynamicEnemy : Enemy
 {
     [SerializeField] private float _speed;
 
-    public Rigidbody2D RigidCompo { get; private set; }
-
     public UnityEvent OnReflectionEvent;
 
-    protected override void Awake()
-    {
-        base.Awake();
-
-        RigidCompo = GetComponent<Rigidbody2D>();
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,7 +21,6 @@ public class DynamicEnemy : Enemy
         {
             SetDead();
         }
-
     }
 
     public void DirectionToTarget(Vector2 target)
