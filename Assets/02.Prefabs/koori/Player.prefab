@@ -55,7 +55,7 @@ MonoBehaviour:
   expAdded: 5
   expLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   expDetectRange: 0.5
 --- !u!114 &4347817849785918015
 MonoBehaviour:
