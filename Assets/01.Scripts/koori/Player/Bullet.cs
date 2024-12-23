@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] Vector2EventChannelSO attackEventChannel;
     [SerializeField] float speed;
-
+    [SerializeField] CollisionEventChannelSO collisionEventChannel;
     private Vector2 _windowsPos;
 
     public Rigidbody2D rb { get; private set; }
@@ -53,6 +53,8 @@ public class Bullet : MonoBehaviour
             Debug.Log(player);
             player.GameOver();
         }
+
+        collisionEventChannel.RaiseEvent(collision);
     }
 
 

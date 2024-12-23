@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7609582431298101841}
   - component: {fileID: 4409440987324628635}
   m_Layer: 9
-  m_Name: ShockWave
+  m_Name: PlayerDeadShockWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
