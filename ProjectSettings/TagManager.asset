@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,6 +15,7 @@ TagManager:
   - Wall
   - Player
   - Bullet
+  - Enemy
   - 
   - 
   - 
@@ -52,6 +54,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 79432669
     locked: 0
   - name: Effect
     uniqueID: 901339373
