@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8893776960096535637}
   - component: {fileID: 6298921957138887203}
   - component: {fileID: 616412039711750931}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3658378370992130234}
   - component: {fileID: 5907860705641676538}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5830837267120828660}
   - component: {fileID: 2602486877464668131}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
