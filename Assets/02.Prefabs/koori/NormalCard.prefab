@@ -273,8 +273,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20240213f8eeca14abfcef9490539442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iconImage: {fileID: 3612865529519607879}
+  cardImage: {fileID: 1313677851700409886}
+  nameTxt: {fileID: 2084789086153880972}
+  desTxt: {fileID: 1413539404836813074}
+  chooseCardChannel: {fileID: 11400000, guid: 1faa42136611ecb488bb6c268d4bca1a, type: 2}
   transitionTime: 0.7
-  poolName: Card
 --- !u!1 &5458906152960124697
 GameObject:
   m_ObjectHideFlags: 0

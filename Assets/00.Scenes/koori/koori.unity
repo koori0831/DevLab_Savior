@@ -377,7 +377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315812491551097691, guid: c56b5c00fda22ed4389e17a59ebd1f11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 4315812491551097691, guid: c56b5c00fda22ed4389e17a59ebd1f11, type: 3}
       propertyPath: m_LocalPosition.y
@@ -453,6 +453,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20240213f8eeca14abfcef9490539442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iconImage: {fileID: 0}
+  cardImage: {fileID: 0}
+  nameTxt: {fileID: 0}
+  desTxt: {fileID: 0}
+  chooseCardChannel: {fileID: 0}
   transitionTime: 0.7
 --- !u!1001 &692290053
 PrefabInstance:
@@ -500,7 +505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315812491551097691, guid: c56b5c00fda22ed4389e17a59ebd1f11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 326.66656
       objectReference: {fileID: 0}
     - target: {fileID: 4315812491551097691, guid: c56b5c00fda22ed4389e17a59ebd1f11, type: 3}
       propertyPath: m_LocalPosition.y
@@ -576,6 +581,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20240213f8eeca14abfcef9490539442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iconImage: {fileID: 0}
+  cardImage: {fileID: 0}
+  nameTxt: {fileID: 0}
+  desTxt: {fileID: 0}
+  chooseCardChannel: {fileID: 0}
   transitionTime: 0.7
 --- !u!1 &752928911
 GameObject:
@@ -869,12 +879,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6431deeab4cb1e84aad50a2a9421e551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardSOList:
+  - {fileID: 11400000, guid: a4217a8cf9aa2d248aa4e2a7a1332f4c, type: 2}
+  - {fileID: 11400000, guid: 36127579afe71394db89b3648e227daf, type: 2}
+  cardContainer: {fileID: 3596978182385477767}
   cardPrefab: {fileID: 3603049673869745315, guid: 866637a9aa7e6a24fa2033c4300d2480, type: 3}
   spawnTrms:
   - {fileID: 16489607}
   - {fileID: 1521776742}
   - {fileID: 1513786949}
   levelUpChannel: {fileID: 11400000, guid: bb2368f45a465294e8e7aeec9daa7c11, type: 2}
+  chooseCardChannel: {fileID: 11400000, guid: 1faa42136611ecb488bb6c268d4bca1a, type: 2}
+  stopGameChannel: {fileID: 11400000, guid: e84b6b0c882cb0b45beb148113de35d0, type: 2}
   spawnDelay: 0.07
 --- !u!114 &1342062244 stripped
 MonoBehaviour:
@@ -1358,11 +1374,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7356334587113868476, guid: bb2246feebe6e5e418c1f410e9fd1e65, type: 3}
+      propertyPath: levelUpEventChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: bb2368f45a465294e8e7aeec9daa7c11, type: 2}
+    - target: {fileID: 7356334587113868476, guid: bb2246feebe6e5e418c1f410e9fd1e65, type: 3}
+      propertyPath: stopGameEventChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: e84b6b0c882cb0b45beb148113de35d0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb2246feebe6e5e418c1f410e9fd1e65, type: 3}
+--- !u!114 &3596978182385477767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2028039887719406909, guid: bb2246feebe6e5e418c1f410e9fd1e65, type: 3}
+  m_PrefabInstance: {fileID: 3596978182385477766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fd43c6193facd24a8783b2055408284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5279496286598998015
 PrefabInstance:
   m_ObjectHideFlags: 0
