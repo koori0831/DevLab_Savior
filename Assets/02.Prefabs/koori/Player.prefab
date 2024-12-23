@@ -49,14 +49,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   findPlayerEvent: {fileID: 11400000, guid: 045a3c000cc7e7d42bc6d0c7212b0d76, type: 2}
-  playerPosEvent: {fileID: 0}
+  playerPosEvent: {fileID: 11400000, guid: 4160637b74b0fd342891c3e6d0378ade, type: 2}
   attackEventChannel: {fileID: 11400000, guid: 27e60d32e9208624e919e7d7cd0f2d3a, type: 2}
   playerInput: {fileID: 11400000, guid: b5da54caf082f2c41b48befd381a6f0b, type: 2}
-  expAdded: 5
-  expLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  expDetectRange: 0.5
 --- !u!114 &4347817849785918015
 MonoBehaviour:
   m_ObjectHideFlags: 0
