@@ -21,5 +21,14 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameManager.Instance.CameraManager.ShakeCamera(0.1f, 0.1f);
+        Debug.Log(collision.gameObject.tag);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
