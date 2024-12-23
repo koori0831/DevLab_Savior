@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
     [SerializeField] VoidEventChannelSO findPlayerEvent;
     [SerializeField] TransformEventChannel playerPosEvent;
     [SerializeField] Vector2EventChannelSO attackEventChannel;
+    [SerializeField] BoolEventChannelSO gameOverEventChannel;
     [SerializeField] PlayerInputSO playerInput;
 
     [SerializeField] LayerMask expLayer;
@@ -22,7 +23,6 @@ public class Player : MonoBehaviour
         playerInput.AttackEvent += HandleAttackEvent;
         _mover = GetComponent<PlayerMover>();
     }
-
 
     private void OnDestroy()
     {
@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
     {
         PlayerControl(false);
         GameManager.Instance.UIManager.GameOverPopup(true);
+        gameOverEventChannel.RaiseEvent(true);
     }
 
     public void PlayerControl(bool value)
