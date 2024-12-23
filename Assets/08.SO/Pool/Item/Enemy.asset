@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbf29d706103404e985e966fd40482b, type: 3}
   m_Name: Enemy
   m_EditorClassIdentifier: 
-  poolName: Enemy
+  poolName: MeleeEnemy
   prefab: {fileID: 4607998919464924929, guid: 8be14f5a77759754f877f00677ef938e, type: 3}
   count: 50
