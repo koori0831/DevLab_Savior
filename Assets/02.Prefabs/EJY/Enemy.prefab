@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb95712060280e409bd6b9f0aba39de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerPosEvent: {fileID: 11400000, guid: 4160637b74b0fd342891c3e6d0378ade, type: 2}
+  _playerPosEvent: {fileID: 11400000, guid: cdfb0d56966d23446bd3af0b00c33218, type: 2}
   _findPlayerEvent: {fileID: 11400000, guid: 045a3c000cc7e7d42bc6d0c7212b0d76, type: 2}
   _speed: 4
   _poolName: Enemy
