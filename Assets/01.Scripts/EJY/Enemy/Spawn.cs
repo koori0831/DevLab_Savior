@@ -1,17 +1,12 @@
 using System;
 using System.Collections;
-using Unity.Cinemachine;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public enum EnemyType
-{
-    Melee,
-    Range,
-}
-
 public class Spawner : MonoBehaviour
 {
+    [SerializeField] private EnemyKindListSO _enemyKindList;
+
     [SerializeField] private float _spawnCoolTime;
 
     private Camera _cam;
@@ -32,7 +27,7 @@ public class Spawner : MonoBehaviour
         _up = _cam.ViewportToWorldPoint(Vector2.one).y;
         _down = _cam.ViewportToWorldPoint(Vector2.zero).y;
 
-        _enemiesCnt = Enum.GetValues(typeof(EnemyType)).Length;
+        _enemiesCnt = _enemyKindList.enemyKindList.Count;
     }
 
     private void Start()
@@ -51,8 +46,6 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     {
-        EnemyType enemyType = (EnemyType)Random.Range(0, _enemiesCnt);
-
         bool xyFlag = (Random.value > 0.5f);
         bool zeroFlag = (Random.value > 0.5f);
 
@@ -80,8 +73,18 @@ public class Spawner : MonoBehaviour
 
         Vector2 position = new Vector2(x, y);
 
-        Enemy enemy = PoolManager.Instance.Pop($"{enemyType.ToString()}Enemy") as Enemy;
+        int idx = Random.Range(0, _enemiesCnt);
+        string enemyTypeName = _enemyKindList.enemyKindList[idx].enemyName;
+
+        Enemy enemy = PoolManager.Instance.Pop(enemyTypeName) as Enemy;
         enemy.SetPosition(position);
+
+        if (enemy.TryGetComponent(out StaticEnemy staticEnemy))
+        {
+            position.x = Random.Range(_left + 2.25f, _right - 2.25f);
+            position.y = Random.Range(_down + 2.25f, _up - 2.25f);
+            staticEnemy.MoveToPos(position);
+        }
     }
 
     private void OnDrawGizmosSelected()
@@ -89,6 +92,7 @@ public class Spawner : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, new Vector2(_right - _left, _up - _down));
         Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(transform.position, new Vector2((_right - _left) - 3, (_up - _down) - 3));
+        Gizmos.DrawWireCube(transform.position, new Vector2((_right - _left) - 4.5f, (_up - _down) - 4.5f));
+        Gizmos.color = Color.white;
     }
 }
