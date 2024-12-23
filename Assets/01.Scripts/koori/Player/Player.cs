@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     private PlayerMover _mover;
 
     [SerializeField] Rigidbody2D rigidBody;
+    [SerializeField] Bullet bullet;
     [SerializeField] MoveModerator moveModerator;
 
     private void Awake()
@@ -27,12 +28,18 @@ public class Player : MonoBehaviour
         PlayerControl(true);
 
         findPlayerEvent.OnEventRaised += HandleFindPlayerEvent;
-        playerInput.AttackEvent += HandleAttackEvent;
+        playerInput.AttackEvent.OnvalueChanged += HandleAttackEvent;
         _mover = GetComponent<PlayerMover>();
 
         playerInput.InputDirection.OnvalueChanged += OnMove;
     }
 
+    private void HandleAttackEvent(bool prev, bool next)
+    {
+        Debug.Log(next);
+        if (next)
+            attackEventChannel.RaiseEvent(transform.position);
+    }
     private void OnMove(Vector2 prev, Vector2 next)
     {
         moveModerator.Initialize(rigidBody, next);
@@ -43,10 +50,6 @@ public class Player : MonoBehaviour
     private void OnDestroy()
     {
         findPlayerEvent.OnEventRaised -= HandleFindPlayerEvent;
-    }
-    private void HandleAttackEvent()
-    {
-        attackEventChannel.RaiseEvent(transform.position);
     }
     private void HandleFindPlayerEvent()
     {
