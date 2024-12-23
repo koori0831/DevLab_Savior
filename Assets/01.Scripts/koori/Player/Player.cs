@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] TransformEventChannel playerPosEvent;
     [SerializeField] Vector2EventChannelSO attackEventChannel;
     [SerializeField] BoolEventChannelSO gameOverEventChannel;
+    [SerializeField] IntEventChannelSO levelUpEventChannel;
     [SerializeField] PlayerInputSO playerInput;
 
     [SerializeField] int expAdded = 5;
@@ -77,6 +78,7 @@ public class Player : MonoBehaviour
         for (; _exp >= 50; _exp -= 50)
         {
             Level++;
+            levelUpEventChannel.RaiseEvent(Level);
         }
     }
 
