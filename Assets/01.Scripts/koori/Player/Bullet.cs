@@ -22,6 +22,10 @@ public class Bullet : MonoBehaviour
     {
         GameManager.Instance.CameraManager.ShakeCamera(0.1f, 0.1f);
         Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.TryGetComponent(out Player player))
+        {
+            player.GameOver();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
