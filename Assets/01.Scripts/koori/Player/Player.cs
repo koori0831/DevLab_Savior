@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -7,7 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] Vector2EventChannelSO attackEventChannel;
     [SerializeField] BoolEventChannelSO gameOverEventChannel;
     [SerializeField] PlayerInputSO playerInput;
-    
+
     [SerializeField] int expAdded = 5;
 
     [SerializeField] LayerMask expLayer;
@@ -18,22 +19,37 @@ public class Player : MonoBehaviour
 
     private PlayerMover _mover;
 
+    [SerializeField] Rigidbody2D rigidBody;
+    [SerializeField] Bullet bullet;
+    [SerializeField] MoveModerator moveModerator;
+
     private void Awake()
     {
         PlayerControl(true);
 
         findPlayerEvent.OnEventRaised += HandleFindPlayerEvent;
-        playerInput.AttackEvent += HandleAttackEvent;
+        playerInput.AttackEvent.OnvalueChanged += HandleAttackEvent;
         _mover = GetComponent<PlayerMover>();
+
+        playerInput.InputDirection.OnvalueChanged += OnMove;
     }
+
+    private void HandleAttackEvent(bool prev, bool next)
+    {
+        Debug.Log(next);
+        if (next)
+            attackEventChannel.RaiseEvent(transform.position);
+    }
+    private void OnMove(Vector2 prev, Vector2 next)
+    {
+        moveModerator.Initialize(rigidBody, next);
+        moveModerator.ExecuteEvent();
+    }
+
 
     private void OnDestroy()
     {
         findPlayerEvent.OnEventRaised -= HandleFindPlayerEvent;
-    }
-    private void HandleAttackEvent()
-    {
-        attackEventChannel.RaiseEvent(transform.position);
     }
     private void HandleFindPlayerEvent()
     {
@@ -49,10 +65,10 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-        _mover.SetMovement(playerInput.InputDirection);
-    }
+    // private void FixedUpdate()
+    // {
+    //     _mover.SetMovement(playerInput.InputDirection);
+    // }
 
     public void AddExp(int value)
     {
