@@ -1,17 +1,21 @@
+
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private Canvas canvas;
-    [SerializeField] private GameObject gameoverWindow;
+    [SerializeField] GameOverUI gameOverUI;
 
     public void CanvasEnable(bool value)
     {
-        canvas.enabled = value;
+        
     }
 
     public void GameOverPopup(bool value)
     {
-        gameoverWindow.SetActive(value);
+      if (value)
+        {
+            gameOverUI.PopUp();
+        }
     }
 }

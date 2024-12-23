@@ -12,6 +12,8 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - GRADIENT2COL_ON
+  - GRADIENT_ON
   - OUTBASE8DIR_ON
   - OUTBASE_ON
   m_InvalidKeywords:
@@ -127,9 +129,9 @@ Material:
     - _Glow: 10
     - _GlowGlobal: 1
     - _GlowTexUsed: 0
-    - _GradBlend: 1
+    - _GradBlend: 0.58
     - _GradBoostX: 1.2
-    - _GradBoostY: 1.2
+    - _GradBoostY: 3.5
     - _GradIsRadial: 0
     - _GrassManualAnim: 1
     - _GrassManualToggle: 0
@@ -243,10 +245,10 @@ Material:
     - _ColorSwapRed: {r: 1, g: 1, b: 1, a: 1}
     - _FadeBurnColor: {r: 1, g: 1, b: 0, a: 1}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GradBotLeftCol: {r: 0, g: 0, b: 1, a: 1}
+    - _GradBotLeftCol: {r: 0, g: 0, b: 0, a: 1}
     - _GradBotRightCol: {r: 0, g: 0, b: 1, a: 1}
-    - _GradTopLeftCol: {r: 1, g: 0, b: 0, a: 1}
-    - _GradTopRightCol: {r: 1, g: 0, b: 0, a: 1}
+    - _GradTopLeftCol: {r: 1, g: 1, b: 1, a: 1}
+    - _GradTopRightCol: {r: 1, g: 1, b: 1, a: 1}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HitEffectColor: {r: 1, g: 1, b: 1, a: 1}
     - _HologramStripeColor: {r: 0, g: 1, b: 1, a: 1}
