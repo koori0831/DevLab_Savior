@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     [SerializeField] Rigidbody2D rigidBody;
     [SerializeField] Bullet bullet;
     [SerializeField] MoveModerator moveModerator;
-
+    public Transform BulletTrm => bullet.transform;
     private void Awake()
     {
         PlayerControl(true);

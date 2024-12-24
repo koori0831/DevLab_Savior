@@ -4,11 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class CardManager : MonoBehaviour
 {
-    [SerializeField] private List<CardSO> cardSOList;
+    [SerializeField] private CardSOList cardListSO;
     [SerializeField] private CardContainer cardContainer;
 
     [SerializeField] private Card cardPrefab;
@@ -60,7 +61,7 @@ public class CardManager : MonoBehaviour
 
         foreach (var trm in spawnTrms)
         {
-            CardSO cardSo = cardSOList[Random.Range(0, cardSOList.Count)];
+            CardSO cardSo = cardListSO.cardSOList[Random.Range(0, cardListSO.cardSOList.Count)];
 
             Card card = Instantiate(cardPrefab,transform);
             card.Initialize(cardSo,cardContainer);
