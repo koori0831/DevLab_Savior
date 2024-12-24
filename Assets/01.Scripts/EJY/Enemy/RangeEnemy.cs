@@ -7,12 +7,12 @@ public class RangeEnemy : StaticEnemy
 
     private float _currentAttackTime;
 
-    private void Update()
+    protected override void Update()
     {
         if (_player == null)
             return;
 
-        if (Time.time - _currentAttackTime > _attackCoolTime && _canHit)
+        if (Time.time - _currentAttackTime > _attackCoolTime && _canHit)    
             Attack();
     }
 

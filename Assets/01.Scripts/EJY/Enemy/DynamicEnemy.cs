@@ -7,26 +7,9 @@ public class DynamicEnemy : Enemy
 
     public UnityEvent OnReflectionEvent;
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void Contact()
     {
-        if (collision.gameObject.layer != 8)
-        {
-            if (_isDead == false)
-            {
-                Debug.Assert(_player != null, "Player is not found");
-                DirectionToTarget(_player.transform.position);
-            }
-        }
-        else
-        {
-            SetDead();
-        }
-    }
-
-    public void DirectionToTarget(Vector2 target)
-    {
-        Vector2 dir = target - (Vector2)transform.position;
+        Vector2 dir = (Vector2)_player.transform.position  - (Vector2)transform.position;
 
         RigidCompo.linearVelocity = dir.normalized * _speed;
     }
