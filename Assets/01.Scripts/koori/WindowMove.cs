@@ -15,8 +15,8 @@ public static class WindowMove
         curPos = new Vector2(Mathf.Clamp(curPos.x, 0, Screen.currentResolution.width - Screen.width)
             , Mathf.Clamp(curPos.y, 0, Screen.currentResolution.height - Screen.height));
         // Debug.LogError(curPos);
-#if !UNITY_EDITOR
+//#if !UNITY_EDITOR
         SetWindowPos(GetForegroundWindow(), 0, (int)curPos.x, (int)curPos.y, 0, 0, 0x0001 | 0x0004);
-#endif
+//#endif
     }
 }
