@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5698564485024281032}
   - component: {fileID: 7356334587113868476}
-  - component: {fileID: 4347817849785918015}
   - component: {fileID: 2687087302745631187}
   - component: {fileID: 5235839605888427281}
   m_Layer: 7
@@ -64,19 +63,6 @@ MonoBehaviour:
   rigidBody: {fileID: 5235839605888427281}
   bullet: {fileID: 0}
   moveModerator: {fileID: 11400000, guid: 5425368d99b99224fa252239bc2fb206, type: 2}
---- !u!114 &4347817849785918015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595522936653424055}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c4fca9b166b7b0409f3997574e1e108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _moveSpeed: 10
 --- !u!58 &2687087302745631187
 CircleCollider2D:
   m_ObjectHideFlags: 0
