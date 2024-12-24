@@ -634,6 +634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RangeEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6820887067359435551, guid: 88a2a20d4ec970b489b5a85d0348bb29, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
