@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     [SerializeField] TransformEventChannel playerPosEvent;
     [SerializeField] Vector2EventChannelSO attackEventChannel;
     [SerializeField] BoolEventChannelSO gameOverEventChannel;
+    [SerializeField] BoolEventChannelSO stopGameEventChannel;
+    [SerializeField] IntEventChannelSO levelUpEventChannel;
     [SerializeField] PlayerInputSO playerInput;
 
     [SerializeField] int expAdded = 5;
@@ -16,6 +18,7 @@ public class Player : MonoBehaviour
 
     public int Level { get; private set; }
     private int _exp;
+
 
     private PlayerMover _mover;
 
@@ -29,9 +32,18 @@ public class Player : MonoBehaviour
 
         findPlayerEvent.OnEventRaised += HandleFindPlayerEvent;
         playerInput.AttackEvent.OnvalueChanged += HandleAttackEvent;
+        stopGameEventChannel.OnValueEvent += StopGameEventHandle;
         _mover = GetComponent<PlayerMover>();
 
         playerInput.InputDirection.OnvalueChanged += OnMove;
+    }
+
+    private void StopGameEventHandle(bool obj)
+    {
+        if (!obj)
+            playerInput.Controls.Player.Enable();
+        else
+            playerInput.Controls.Player.Disable();
     }
 
     private void HandleAttackEvent(bool prev, bool next)
@@ -49,6 +61,9 @@ public class Player : MonoBehaviour
 
     private void OnDestroy()
     {
+        playerInput.InputDirection.OnvalueChanged -= OnMove;
+        playerInput.AttackEvent.OnvalueChanged -= HandleAttackEvent;
+        stopGameEventChannel.OnValueEvent -= StopGameEventHandle;
         findPlayerEvent.OnEventRaised -= HandleFindPlayerEvent;
     }
     private void HandleFindPlayerEvent()
@@ -77,6 +92,7 @@ public class Player : MonoBehaviour
         for (; _exp >= 50; _exp -= 50)
         {
             Level++;
+            levelUpEventChannel.RaiseEvent(Level);
         }
     }
 

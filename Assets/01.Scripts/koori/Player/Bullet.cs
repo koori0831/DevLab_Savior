@@ -14,20 +14,14 @@ public class Bullet : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        // PlayerInputSO.Instance.AttackEvent.OnvalueChanged(OnAttack);
         attackEventChannel.OnEventRaised += Move;
 
         WindowMove.Move(Screen.mainWindowPosition);
     }
-
-    // private void OnAttack(bool obj)
-    // {
-    //     if (obj)
-    //     {
-
-    //     }
-    // }
-
+    private void OnDestroy()
+    {
+        attackEventChannel.OnEventRaised -= Move;
+    }
 
     private void Update()
     {
