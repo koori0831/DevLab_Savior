@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d113d2511b631f499c34e500bff4fd3, type: 3}
+  m_Name: CardSOList
+  m_EditorClassIdentifier: 
+  cardSOList:
+  - {fileID: 11400000, guid: a4217a8cf9aa2d248aa4e2a7a1332f4c, type: 2}
+  - {fileID: 11400000, guid: 943300ab7e7d84841a866f2673bd3631, type: 2}
+  - {fileID: 11400000, guid: 482fd2c3986c1ed45ac9e9c2b8d2afc7, type: 2}
+  - {fileID: 11400000, guid: b5e5036e9bfe87e449650055fe3d0e7f, type: 2}

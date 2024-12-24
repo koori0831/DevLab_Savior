@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -21,11 +22,12 @@ public class Player : MonoBehaviour
 
 
     private PlayerMover _mover;
+    private PlayerShield _shield;
 
     [SerializeField] Rigidbody2D rigidBody;
     [SerializeField] Bullet bullet;
     [SerializeField] MoveModerator moveModerator;
-
+    public Transform BulletTrm => bullet.transform;
     private void Awake()
     {
         PlayerControl(true);
@@ -33,11 +35,18 @@ public class Player : MonoBehaviour
         findPlayerEvent.OnEventRaised += HandleFindPlayerEvent;
         playerInput.AttackEvent.OnvalueChanged += HandleAttackEvent;
         stopGameEventChannel.OnValueEvent += StopGameEventHandle;
+        
         _mover = GetComponent<PlayerMover>();
-
+        _shield = GetComponentInChildren<PlayerShield>(true);
+        
         playerInput.InputDirection.OnvalueChanged += OnMove;
     }
 
+    public void SetShield(bool isKeep)
+    {
+        _shield.gameObject.SetActive(true);
+        _shield.SetShield(isKeep);
+    }
     private void StopGameEventHandle(bool obj)
     {
         if (!obj)
