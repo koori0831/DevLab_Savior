@@ -5,6 +5,8 @@ public class EnemyBullet : MonoBehaviour, IPoolable
     [SerializeField] private string _poolName = "EnemyBullet";
     [SerializeField] protected float _lifeTime;
 
+    [SerializeField] private BoolEventChannelSO _forcePush;
+
     private float _currentLifeTime = 0;
 
     private bool _isDead = false;
@@ -20,6 +22,7 @@ public class EnemyBullet : MonoBehaviour, IPoolable
     {
         _rigidCompo = GetComponent<Rigidbody2D>();
         _trailRendererCompo = GetComponentInChildren<TrailRenderer>();
+        _forcePush.OnValueEvent += ForcePush;
     }
 
     private void Update()
