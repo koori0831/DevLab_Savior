@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _poolName: EnemyBullet
   _lifeTime: 5
+  stopGameChannel: {fileID: 11400000, guid: e84b6b0c882cb0b45beb148113de35d0, type: 2}
   _forcePush: {fileID: 11400000, guid: 33add52f0a6b9734682c4c37cc0ef6e6, type: 2}
 --- !u!50 &5933190939241369256
 Rigidbody2D:

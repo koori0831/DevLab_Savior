@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public abstract class Enemy : MonoBehaviour, IPoolable
 {
+    [SerializeField] protected BoolEventChannelSO stopGameChannel;
     [SerializeField] private BoolEventChannelSO _forcePush;
     [SerializeField] private TransformEventChannel _playerPosEvent;
     [SerializeField] private VoidEventChannelSO _findPlayerEvent;
@@ -19,11 +20,12 @@ public abstract class Enemy : MonoBehaviour, IPoolable
 
     public GameObject ObjectPrefab => gameObject;
 
-    protected Player _player;
+    protected Player player;
 
-    protected bool _canHit = true;
-    protected bool _canAttack = true;
-    protected bool _isDead = false;
+    protected bool canHit = true;
+    protected bool canAttack = true;
+    protected bool isDead = false;
+    protected bool isStop = false;
 
     protected virtual void Awake()
     {
@@ -35,7 +37,7 @@ public abstract class Enemy : MonoBehaviour, IPoolable
 
     private void OnEnable()
     {
-        if(_player.IsUnityNull())
+        if(player.IsUnityNull())
         _findPlayerEvent.RaiseEvent();
     }
 
@@ -46,9 +48,9 @@ public abstract class Enemy : MonoBehaviour, IPoolable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (_canHit == false) return;
+        if (canHit == false) return;
 
-        if (_isDead == false)
+        if (isDead == false)
         {
             if (collision.gameObject.layer != 8)
             {
@@ -56,7 +58,7 @@ public abstract class Enemy : MonoBehaviour, IPoolable
             }
             else
             {
-                Debug.Assert(_canHit, "안맞아야하는데 죽었어");
+                Debug.Assert(canHit, "안맞아야하는데 죽었어");
                 SetDead();
             }
         }
@@ -84,27 +86,27 @@ public abstract class Enemy : MonoBehaviour, IPoolable
 
     private void SetTarget(Transform player)
     {
-        _player = player.GetComponent<Player>();
+        this.player = player.GetComponent<Player>();
     }
 
     public void SetPosition(Vector2 position) => transform.position = position;
 
     public virtual void SetDead()
     {
-        _isDead = true;
+        isDead = true;
         OnDeadEvent?.Invoke();
     }
 
     public void SetAble(bool value)
     {
-        _canAttack = value;
-        _canHit = value;
+        canAttack = value;
+        canHit = value;
     }
 
     public virtual void ResetItem()
     {
-        _isDead = false;
-        _canAttack = true;
-        _canHit = true;
+        isDead = false;
+        canAttack = true;
+        canHit = true;
     }
 }
