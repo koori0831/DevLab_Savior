@@ -755,6 +755,63 @@ MonoBehaviour:
   desTxt: {fileID: 0}
   chooseCardChannel: {fileID: 0}
   transitionTime: 0.7
+--- !u!1001 &706382221
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4304747544347428343, guid: aff3546df9fd67748924fe6431715d95, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304747544347428343, guid: aff3546df9fd67748924fe6431715d95, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304747544347428343, guid: aff3546df9fd67748924fe6431715d95, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304747544347428343, guid: aff3546df9fd67748924fe6431715d95, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304747544347428343, guid: aff3546df9fd67748924fe6431715d95, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304747544347428343, guid: aff3546df9fd67748924fe6431715d95, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304747544347428343, guid: aff3546df9fd67748924fe6431715d95, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304747544347428343, guid: aff3546df9fd67748924fe6431715d95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304747544347428343, guid: aff3546df9fd67748924fe6431715d95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304747544347428343, guid: aff3546df9fd67748924fe6431715d95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8332724302301781898, guid: aff3546df9fd67748924fe6431715d95, type: 3}
+      propertyPath: m_Name
+      value: ShockWave
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aff3546df9fd67748924fe6431715d95, type: 3}
 --- !u!1 &752928911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,9 +1207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6431deeab4cb1e84aad50a2a9421e551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardSOList:
-  - {fileID: 11400000, guid: a4217a8cf9aa2d248aa4e2a7a1332f4c, type: 2}
-  - {fileID: 11400000, guid: 36127579afe71394db89b3648e227daf, type: 2}
+  cardListSO: {fileID: 0}
   cardContainer: {fileID: 3596978182385477767}
   cardPrefab: {fileID: 3603049673869745315, guid: 866637a9aa7e6a24fa2033c4300d2480, type: 3}
   spawnTrms:
@@ -1435,14 +1490,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 1915144701334967157, guid: e3ff1c3b455390145b5e91a2e09b3916, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1915144701334967157, guid: e3ff1c3b455390145b5e91a2e09b3916, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1934377717796439668, guid: e3ff1c3b455390145b5e91a2e09b3916, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1483,7 +1530,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8888095185898916620, guid: e3ff1c3b455390145b5e91a2e09b3916, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1665,6 +1713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 4468670555103575985, guid: 0409b9677da6a4343aa3a82cb52ba650, type: 3}
+      propertyPath: _forcePush
+      value: 
+      objectReference: {fileID: 11400000, guid: 33add52f0a6b9734682c4c37cc0ef6e6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1742,3 +1794,4 @@ SceneRoots:
   - {fileID: 752928915}
   - {fileID: 1077021501}
   - {fileID: 1426122980}
+  - {fileID: 706382221}

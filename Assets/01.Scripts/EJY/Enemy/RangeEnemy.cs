@@ -25,5 +25,7 @@ public class RangeEnemy : StaticEnemy
         Vector2 dirToTarget = _player.transform.position - transform.position;
 
         enemyBullet.SetVelocityAndPosition(transform.position, dirToTarget.normalized * _shotPower);
+
+        enemyBullet.transform.rotation = Quaternion.FromToRotation(Vector2.up,dirToTarget);
     }
 }
