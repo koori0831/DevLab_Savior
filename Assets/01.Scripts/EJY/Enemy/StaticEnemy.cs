@@ -17,6 +17,7 @@ public abstract class StaticEnemy : Enemy
     private IEnumerator MoveToPosCoroutine(Vector2 pos)
     {
         RigidCompo.MovePosition(pos);
+        Debug.Log(RigidCompo.linearVelocity);
 
         _canHit = false;
 

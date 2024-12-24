@@ -12,7 +12,7 @@ public class RangeEnemy : StaticEnemy
         if (_player == null)
             return;
 
-        if (Time.time - _currentAttackTime > 0)
+        if (Time.time - _currentAttackTime > _attackCoolTime && _canHit)
             Attack();
     }
 
