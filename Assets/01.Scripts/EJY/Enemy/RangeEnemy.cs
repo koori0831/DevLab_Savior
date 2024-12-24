@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class RangeEnemy : StaticEnemy
@@ -5,24 +6,38 @@ public class RangeEnemy : StaticEnemy
     [SerializeField] private float _shotPower;
     [SerializeField] private float _attackCoolTime;
 
-    private float _currentAttackTime;
+    private float _currentAttackTime = 0;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        stopGameChannel.OnValueEvent += StopGame;
+    }
+
+    private void StopGame(bool value)
+    {
+        isStop = value;
+    }
 
     protected override void Update()
     {
-        if (_player == null)
+        if (player == null)
             return;
 
-        if (Time.time - _currentAttackTime > _attackCoolTime && _canHit)    
+        if(!isStop)
+            _currentAttackTime += Time.deltaTime;
+
+        if (_currentAttackTime > _attackCoolTime && canHit)    
             Attack();
     }
 
     private void Attack()
     {
-        _currentAttackTime = Time.time;
+        _currentAttackTime = 0;
 
         EnemyBullet enemyBullet = PoolManager.Instance.Pop("EnemyBullet") as EnemyBullet;
 
-        Vector2 dirToTarget = _player.transform.position - transform.position;
+        Vector2 dirToTarget = player.transform.position - transform.position;
 
         enemyBullet.SetVelocityAndPosition(transform.position, dirToTarget.normalized * _shotPower);
 

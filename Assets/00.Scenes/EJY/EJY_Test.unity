@@ -1713,10 +1713,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 4468670555103575985, guid: 0409b9677da6a4343aa3a82cb52ba650, type: 3}
-      propertyPath: _forcePush
-      value: 
-      objectReference: {fileID: 11400000, guid: 33add52f0a6b9734682c4c37cc0ef6e6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
