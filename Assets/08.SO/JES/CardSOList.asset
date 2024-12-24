@@ -15,3 +15,5 @@ MonoBehaviour:
   cardSOList:
   - {fileID: 11400000, guid: a4217a8cf9aa2d248aa4e2a7a1332f4c, type: 2}
   - {fileID: 11400000, guid: 943300ab7e7d84841a866f2673bd3631, type: 2}
+  - {fileID: 11400000, guid: 482fd2c3986c1ed45ac9e9c2b8d2afc7, type: 2}
+  - {fileID: 11400000, guid: b5e5036e9bfe87e449650055fe3d0e7f, type: 2}
