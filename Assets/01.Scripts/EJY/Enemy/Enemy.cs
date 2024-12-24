@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -19,6 +20,7 @@ public abstract class Enemy : MonoBehaviour, IPoolable
     protected Player _player;
 
     protected bool _canHit = true;
+    protected bool _canAttack = true;
     protected bool _isDead = false;
 
     protected virtual void Awake()
@@ -26,13 +28,44 @@ public abstract class Enemy : MonoBehaviour, IPoolable
         RigidCompo = GetComponent<Rigidbody2D>();
 
         _playerPosEvent.OnEventRaised += SetTarget;
+    }
 
+    private void Start()
+    {
         _findPlayerEvent.RaiseEvent();
+    }
+
+    protected virtual void Update()
+    {
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (_canHit == false) return;
+
+        if (_isDead == false)
+        {
+            if (collision.gameObject.layer != 8)
+            {
+                Contact();
+            }
+            else
+            {
+                SetDead();
+            }
+        }
+
     }
 
     protected virtual void OnApplicationQuit()
     {
         _playerPosEvent.OnEventRaised -= SetTarget;
+    }
+
+    protected virtual void Contact()
+    {
+
     }
 
     private void SetTarget(Transform player)
@@ -48,9 +81,16 @@ public abstract class Enemy : MonoBehaviour, IPoolable
         OnDeadEvent?.Invoke();
     }
 
+    public void SetAble(bool value)
+    {
+        _canAttack = value;
+        _canHit = value;
+    }
+
     public virtual void ResetItem()
     {
         _isDead = false;
+        _canAttack = true;
         _canHit = true;
     }
 }
