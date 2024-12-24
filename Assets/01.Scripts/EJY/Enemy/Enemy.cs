@@ -1,10 +1,12 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public abstract class Enemy : MonoBehaviour, IPoolable
 {
+    [SerializeField] private BoolEventChannelSO _forcePush;
     [SerializeField] private TransformEventChannel _playerPosEvent;
     [SerializeField] private VoidEventChannelSO _findPlayerEvent;
 
@@ -28,10 +30,12 @@ public abstract class Enemy : MonoBehaviour, IPoolable
         RigidCompo = GetComponent<Rigidbody2D>();
 
         _playerPosEvent.OnEventRaised += SetTarget;
+        _forcePush.OnValueEvent += ForcePush;
     }
 
-    private void Start()
+    private void OnEnable()
     {
+        if(_player.IsUnityNull())
         _findPlayerEvent.RaiseEvent();
     }
 
@@ -62,6 +66,15 @@ public abstract class Enemy : MonoBehaviour, IPoolable
     protected virtual void OnDestroy()
     {
         _playerPosEvent.OnEventRaised -= SetTarget;
+        _forcePush.OnValueEvent -= ForcePush;
+    }
+
+    private void ForcePush(bool value)
+    {
+        Debug.Log(gameObject.activeSelf != value);
+        if (gameObject.activeSelf != value)
+            PoolManager.Instance.Push(this);
+
     }
 
     protected virtual void Contact()

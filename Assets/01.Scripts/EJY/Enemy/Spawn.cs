@@ -13,6 +13,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _spawnCoolTime;
     [SerializeField] private float _movePower;
 
+    [SerializeField] private BoolEventChannelSO _forcePush;
+
     public List<GameObject> _enemyList = new();
 
     private List<IPoolable> _poolables;
@@ -43,6 +45,10 @@ public class Spawner : MonoBehaviour
         StartCoroutine(SpawnCoroutine());
     }
 
+    private void OnDestroy()
+    {
+        _forcePush.RaiseEvent(false);
+    }
     private IEnumerator SpawnCoroutine()
     {
         while (true)

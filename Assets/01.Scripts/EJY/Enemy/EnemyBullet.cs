@@ -43,6 +43,11 @@ public class EnemyBullet : MonoBehaviour, IPoolable
         }
     }
 
+    private void ForcePush(bool value)
+    {
+        if (gameObject.activeSelf != value)
+            PoolManager.Instance.Push(this);
+    }
     public void SetVelocityAndPosition(Vector2 position,Vector2 velocity)
     {
         transform.position = position;
