@@ -19,6 +19,7 @@ public abstract class Enemy : MonoBehaviour, IPoolable
     protected Player _player;
 
     protected bool _canHit = true;
+    protected bool _canAttack = true;
     protected bool _isDead = false;
 
     protected virtual void Awake()

@@ -14,6 +14,7 @@ public class DynamicEnemy : Enemy
         {
             if (_isDead == false)
             {
+                Debug.Assert(_player != null, "Player is not found");
                 DirectionToTarget(_player.transform.position);
             }
         }
