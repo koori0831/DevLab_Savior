@@ -27,7 +27,10 @@ public abstract class Enemy : MonoBehaviour, IPoolable
         RigidCompo = GetComponent<Rigidbody2D>();
 
         _playerPosEvent.OnEventRaised += SetTarget;
+    }
 
+    private void Start()
+    {
         _findPlayerEvent.RaiseEvent();
     }
 
