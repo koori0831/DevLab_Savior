@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Vector2 _enemySpawnArea;
     [SerializeField] private Vector2 _staticEnemyArea;
     [SerializeField] private float _spawnCoolTime;
+    [SerializeField] private float _movePower;
 
     public List<GameObject> _enemyList = new();
 
@@ -87,9 +89,21 @@ public class Spawner : MonoBehaviour
 
         if (enemy.TryGetComponent(out StaticEnemy staticEnemy))
         {
+            staticEnemy.SetAble(false);
+            staticEnemy.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+
             position.x = Random.Range(-(_staticEnemyArea.x / 2), _staticEnemyArea.x / 2);
             position.y = Random.Range(-(_staticEnemyArea.y / 2), _staticEnemyArea.y / 2);
-            staticEnemy.MoveToPos(position);
+
+            float distance = Vector2.Distance(staticEnemy.transform.position, position);
+            float duration = distance / _movePower;
+
+            DOTween.Sequence().Append(staticEnemy.transform.DOMove(position, duration)).Join(staticEnemy.transform.DOScale(Vector3.one, duration))
+                .OnComplete(() =>
+                {
+                    staticEnemy.SetAble(true);
+                    Debug.Log("°ø°Ý ¿Â");
+                });
         }
     }
 
