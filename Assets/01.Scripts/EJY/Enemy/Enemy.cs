@@ -52,13 +52,14 @@ public abstract class Enemy : MonoBehaviour, IPoolable
             }
             else
             {
+                Debug.Assert(_canHit, "안맞아야하는데 죽었어");
                 SetDead();
             }
         }
 
     }
 
-    protected virtual void OnApplicationQuit()
+    protected virtual void OnDestroy()
     {
         _playerPosEvent.OnEventRaised -= SetTarget;
     }
