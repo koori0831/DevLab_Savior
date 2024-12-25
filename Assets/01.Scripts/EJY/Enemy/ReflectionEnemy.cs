@@ -6,7 +6,6 @@ public class ReflectionEnemy : DynamicEnemy
     [SerializeField] private float _shotPower;
 
     private bool _isFirst = true;
-    [SerializeField] private Collider2D _collider;
 
     protected override void Contact()
     {
@@ -14,10 +13,19 @@ public class ReflectionEnemy : DynamicEnemy
         {
             _isFirst = false;
             RigidCompo.linearVelocity = (player.transform.position - transform.position).normalized * _speed;
-            _collider.enabled = true;
         }
         else
         {
+            Vector2 velocity = RigidCompo.linearVelocity;
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, velocity, 30, _whatIsWall);
+
+            float dot = Vector2.Dot(-velocity, hit.normal);
+
+            Vector2 reflection = velocity + ((2 * hit.normal) * dot);
+
+            RigidCompo.linearVelocity = reflection.normalized * _speed;
+
             Attack();
         }
 
@@ -33,5 +41,17 @@ public class ReflectionEnemy : DynamicEnemy
         enemyBullet.SetVelocityAndPosition(transform.position, dirToTarget.normalized * _shotPower);
 
         enemyBullet.transform.rotation = Quaternion.FromToRotation(Vector2.up, dirToTarget);
+    }
+
+    public override void ResetItem()
+    {
+        base.ResetItem();
+        _isFirst = true;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position, RigidCompo.linearVelocity);  
     }
 }

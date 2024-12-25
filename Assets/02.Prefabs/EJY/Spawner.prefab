@@ -53,3 +53,4 @@ MonoBehaviour:
   _enemyList:
   - {fileID: 4607998919464924929, guid: 8be14f5a77759754f877f00677ef938e, type: 3}
   - {fileID: 6820887067359435551, guid: 88a2a20d4ec970b489b5a85d0348bb29, type: 3}
+  - {fileID: 5533069676408997605, guid: 5ce62e57a90dcd04fbeb7a677c8e4bc1, type: 3}
