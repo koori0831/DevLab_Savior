@@ -8,26 +8,18 @@ public class RangeEnemy : StaticEnemy
 
     private float _currentAttackTime = 0;
 
-    protected override void Awake()
-    {
-        base.Awake();
-        stopGameChannel.OnValueEvent += StopGame;
-    }
-
-    private void StopGame(bool value)
-    {
-        isStop = value;
-    }
-
     protected override void Update()
     {
+        Debug.Log(player);
+        Debug.Log(isStop);
         if (player == null)
             return;
 
-        if(!isStop)
-            _currentAttackTime += Time.deltaTime;
+        if (isStop) return;
 
-        if (_currentAttackTime > _attackCoolTime && canHit)    
+        _currentAttackTime += Time.deltaTime;
+
+        if (_currentAttackTime > _attackCoolTime && canHit)
             Attack();
     }
 
@@ -41,6 +33,6 @@ public class RangeEnemy : StaticEnemy
 
         enemyBullet.SetVelocityAndPosition(transform.position, dirToTarget.normalized * _shotPower);
 
-        enemyBullet.transform.rotation = Quaternion.FromToRotation(Vector2.up,dirToTarget);
+        enemyBullet.transform.rotation = Quaternion.FromToRotation(Vector2.up, dirToTarget);
     }
 }
