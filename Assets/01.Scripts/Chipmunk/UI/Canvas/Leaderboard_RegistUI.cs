@@ -15,25 +15,27 @@ public class Leaderboard_RegistUI : MonoBehaviour
     [SerializeField] TMP_InputField nameInput;
     [SerializeField] public UnityEvent onRegist;
     [SerializeField] public UnityEvent onRegistFail;
-    [ContextMenu("TestDrawScore")]
-    public void TestDrawScore()
+    int min;
+    int sec;
+    public async void DrawScore()
     {
-        DrawScore(100);
-    }
-    public async void DrawScore(int score)
-    {
-        scoreText.text = score.ToString();
+        min = TimeUI.Instance._min;
+        sec = Mathf.FloorToInt(TimeUI.Instance._sec);
+        scoreText.text = $"{min}분 {sec}초 생존";
 
         LeaderboardScoresWithNotFoundPlayerIds value = await LeaderboardsService.Instance.GetScoresByPlayerIdsAsync("ranking", new List<string>() { AuthenticationService.Instance.PlayerId });
-        leaderBoardScoreText.text = value.Results[0].Score.ToString();
+        int time = (int)value.Results[0].Score;
+        leaderBoardScoreText.text = $"{time / 60}분 {time % 60}초";
     }
     [ContextMenu("RegistScore")]
     public void RegistScore()
     {
         try
         {
-            Leaderboard.Instance.AddValue(int.Parse(scoreText.text), nameInput.text);
-        }catch(System.Exception e)
+            int time = (min * 60) + sec;
+            Leaderboard.Instance.AddValue(time, nameInput.text);
+        }
+        catch (System.Exception e)
         {
             Debug.LogError(e);
             onRegistFail.Invoke();
