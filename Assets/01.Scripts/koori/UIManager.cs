@@ -1,8 +1,6 @@
 
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -15,12 +13,8 @@ public class UIManager : MonoBehaviour
     private void OnSceneLoad(Scene arg0, LoadSceneMode arg1)
     {
         gameOverUI = FindAnyObjectByType<GameOverUI>();
+        if (gameOverUI == null) return;
         gameOverUI.gameObject.SetActive(false);
-    }
-
-    public void CanvasEnable(bool value)
-    {
-        
     }
 
     public void GameOverPopup(bool value)
