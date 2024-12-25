@@ -7,8 +7,10 @@
     <list default="true" id="51551f16-1008-4964-8e10-20782afc1f39" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DevLab_Savior/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DevLab_Savior/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00.Scenes/JEs/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Scenes/JEs/MainGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scripts/koori/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scripts/koori/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BroAudio/Core/Resources/BroAudioData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BroAudio/Core/Resources/BroAudioData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AllIn1SpriteShader/2DRenderer-URP-2021.2plus.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AllIn1SpriteShader/2DRenderer-URP-pre2021.2.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,6 +93,7 @@
       <updated>1735050914217</updated>
       <workItem from="1735050915954" duration="1781000" />
       <workItem from="1735054119547" duration="929000" />
+      <workItem from="1735113805404" duration="2175000" />
     </task>
     <servers />
   </component>
