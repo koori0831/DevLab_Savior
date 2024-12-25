@@ -114,7 +114,6 @@ public class Spawner : MonoBehaviour
                 .OnComplete(() =>
                 {
                     staticEnemy.SetAble(true);
-                    Debug.Log("°ø°Ý ¿Â");
                 });
         }
     }

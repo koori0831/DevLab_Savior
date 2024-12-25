@@ -1,30 +1,26 @@
-using System;
 using UnityEngine;
 
-public class RangeEnemy : StaticEnemy
+public class ReflectionEnemy : DynamicEnemy
 {
     [SerializeField] private float _shotPower;
-    [SerializeField] private float _attackCoolTime;
 
-    private float _currentAttackTime = 0;
+    private bool _isFirst = true;
 
-    protected override void Update()
+    protected override void Contact()
     {
-        if (player == null)
-            return;
-
-        if (isStop) return;
-
-        _currentAttackTime += Time.deltaTime;
-
-        if (_currentAttackTime > _attackCoolTime && canHit)
+        if (_isFirst)
+        {
+            _isFirst = false;
+            RigidCompo.linearVelocity = (player.transform.position - transform.position).normalized * _speed;
+        }
+        else
+        {
             Attack();
+        }
     }
 
     private void Attack()
     {
-        _currentAttackTime = 0;
-
         EnemyBullet enemyBullet = PoolManager.Instance.Pop("EnemyBullet") as EnemyBullet;
 
         Vector2 dirToTarget = player.transform.position - transform.position;
