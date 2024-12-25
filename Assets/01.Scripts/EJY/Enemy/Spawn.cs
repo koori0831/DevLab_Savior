@@ -14,6 +14,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _movePower;
 
     [SerializeField] private BoolEventChannelSO _forcePush;
+    [SerializeField] private BoolEventChannelSO _stopGame;
 
     public List<GameObject> _enemyList = new();
 
@@ -26,6 +27,8 @@ public class Spawner : MonoBehaviour
 
     private int _enemiesCnt;
 
+    private bool isStop;
+
     private void Awake()
     {
         _right = _enemySpawnArea.x / 2;
@@ -36,6 +39,8 @@ public class Spawner : MonoBehaviour
         _poolables = _enemyList.Select(item => item.GetComponent<IPoolable>())
             .Where(component => component != null)
             .ToList();
+
+        _stopGame.OnValueEvent += (bool obj) => isStop = obj;
 
         _enemiesCnt = _enemyList.Count;
     }
@@ -54,7 +59,8 @@ public class Spawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(_spawnCoolTime);
-            Spawn();
+            if (!isStop)
+                Spawn();
         }
     }
 

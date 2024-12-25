@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     private PlayerShield _shield;
 
     [SerializeField] Rigidbody2D rigidBody;
-    [SerializeField] Bullet bullet;
+    [field: SerializeField] public Bullet bullet { get; private set; }
     [SerializeField] MoveModerator moveModerator;
     public Transform BulletTrm => bullet.transform;
     private void Awake()
@@ -89,16 +89,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    // private void FixedUpdate()
-    // {
-    //     _mover.SetMovement(playerInput.InputDirection);
-    // }
-
     public void AddExp(int value)
     {
         _exp += value;
 
-        for (; _exp >= 50; _exp -= 50)
+        for (; _exp >= 30; _exp -= 30)
         {
             Level++;
             levelUpEventChannel.RaiseEvent(Level);
@@ -117,6 +112,12 @@ public class Player : MonoBehaviour
         if (value)
             playerInput.Controls.Enable();
         else playerInput.Controls.Disable();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bullet") || collision.CompareTag("Enemy"))
+            GameOver();
     }
 
     private void OnDrawGizmos()

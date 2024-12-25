@@ -154,25 +154,6 @@ RectTransform:
   m_AnchoredPosition: {x: -326.6667, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &60742862 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8303316094338302615, guid: 5a4e71723c42d4c42a03853b3f01352a, type: 3}
-  m_PrefabInstance: {fileID: 1426122980}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &60742865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60742862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35b5e900a8e54b949b3d90960fb81e75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyKindList: {fileID: 11400000, guid: fd94edc6c8bb91848879f449b47c1eee, type: 2}
-  _spawnCoolTime: 5
 --- !u!1 &121909090
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,10 +966,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4605731820541177450, guid: cc61941ed720f2e468f4a57432d8d00d, type: 3}
+      propertyPath: collisionEventChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: cc19883ea5d3d1c4ab620a9ce37a128e, type: 2}
     - target: {fileID: 6696494148564015564, guid: cc61941ed720f2e468f4a57432d8d00d, type: 3}
       propertyPath: m_Name
       value: Bullet
       objectReference: {fileID: 0}
+    - target: {fileID: 8894531198612474088, guid: cc61941ed720f2e468f4a57432d8d00d, type: 3}
+      propertyPath: rigidBody
+      value: 
+      objectReference: {fileID: 1430881428}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1226,9 +1215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6431deeab4cb1e84aad50a2a9421e551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardSOList:
-  - {fileID: 11400000, guid: a4217a8cf9aa2d248aa4e2a7a1332f4c, type: 2}
-  - {fileID: 11400000, guid: 36127579afe71394db89b3648e227daf, type: 2}
+  cardListSO: {fileID: 11400000, guid: 3a4164ef38d5a004daf1eedae992d4c2, type: 2}
   cardContainer: {fileID: 3596978182385477767}
   cardPrefab: {fileID: 3603049673869745315, guid: 866637a9aa7e6a24fa2033c4300d2480, type: 3}
   spawnTrms:
@@ -1291,15 +1278,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5266386364364493041, guid: 5a4e71723c42d4c42a03853b3f01352a, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8303316094338302615, guid: 5a4e71723c42d4c42a03853b3f01352a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 60742865}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a4e71723c42d4c42a03853b3f01352a, type: 3}
+--- !u!114 &1430881426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4605731820541177450, guid: cc61941ed720f2e468f4a57432d8d00d, type: 3}
+  m_PrefabInstance: {fileID: 917332145}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b939668b9115aff4daa51bf0ed2c14cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &1430881428 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4951753224662305425, guid: cc61941ed720f2e468f4a57432d8d00d, type: 3}
+  m_PrefabInstance: {fileID: 917332145}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1513786948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,6 +1611,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7356334587113868476, guid: bb2246feebe6e5e418c1f410e9fd1e65, type: 3}
+      propertyPath: <bullet>k__BackingField
+      value: 
+      objectReference: {fileID: 1430881426}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

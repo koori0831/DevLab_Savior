@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e55577745a884a4e8129865679d0586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidBody: {fileID: 4951753224662305425}
   screenWavePref: {fileID: 4409440987324628635, guid: aff3546df9fd67748924fe6431715d95, type: 3}
   strength: 1
   duration: 1
@@ -145,9 +146,10 @@ GameObject:
   - component: {fileID: 6524330607304917172}
   - component: {fileID: 4605731820541177450}
   - component: {fileID: 1574146401112644780}
+  - component: {fileID: 5216333289250891398}
   m_Layer: 8
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -301,7 +303,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackEventChannel: {fileID: 11400000, guid: 27e60d32e9208624e919e7d7cd0f2d3a, type: 2}
+  StopEventChannel: {fileID: 11400000, guid: e84b6b0c882cb0b45beb148113de35d0, type: 2}
   speed: 20
+  collisionEventChannel: {fileID: 11400000, guid: cc19883ea5d3d1c4ab620a9ce37a128e, type: 2}
+  windowMove: 0
   bulletMove: {fileID: 11400000, guid: 1cb33ee3ffe4c29418af559e5bd20023, type: 2}
 --- !u!114 &1574146401112644780
 MonoBehaviour:
@@ -333,6 +338,42 @@ MonoBehaviour:
   collisionExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!58 &5216333289250891398
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6696494148564015564}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &8723757088109826875
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,9 +5,13 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] Vector2EventChannelSO attackEventChannel;
+    [SerializeField] BoolEventChannelSO StopEventChannel;
     [SerializeField] float speed;
+    [SerializeField] CollisionEventChannelSO collisionEventChannel;
 
+    public bool windowMove;
     private Vector2 _windowsPos;
+    private int stopValue = 1;
 
     public Rigidbody2D rb { get; private set; }
     [SerializeField] private MoveModerator bulletMove;
@@ -15,38 +19,43 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         attackEventChannel.OnEventRaised += Move;
+        StopEventChannel.OnValueEvent += Stop;
 
         WindowMove.Move(Screen.mainWindowPosition);
     }
+
+    private void Stop(bool obj)
+    {
+        if (obj) rb.linearVelocity = Vector2.zero;
+        stopValue = obj ? 0 : 1;
+        Debug.Log($"stop {stopValue} {obj}");  
+    }
+
     private void OnDestroy()
     {
         attackEventChannel.OnEventRaised -= Move;
+        StopEventChannel.OnValueEvent -= Stop;
     }
 
     private void Update()
     {
-        WindowMove.Move(_windowsPos);
+        if (windowMove) 
+            WindowMove.Move(_windowsPos);
     }
 
     private void Move(Vector2 playerPos)
     {
-        Debug.Log("Move");  
-        bulletMove.Initialize(rb, (playerPos - (Vector2)transform.position).normalized);
+        bulletMove.Initialize(rb, (playerPos - (Vector2)transform.position).normalized * stopValue);
         bulletMove.ExecuteEvent();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameManager.Instance.CameraManager.ShakeCamera(0.1f, 0.1f);
-        Debug.Log(collision.gameObject.tag);
 
         _windowsPos = rb.linearVelocity.normalized * 5;
 
-        if (collision.gameObject.TryGetComponent(out Player player))
-        {
-            Debug.Log(player);
-            player.GameOver();
-        }
+        collisionEventChannel.RaiseEvent(collision);
     }
 
 
