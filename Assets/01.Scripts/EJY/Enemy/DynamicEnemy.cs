@@ -12,8 +12,6 @@ public class DynamicEnemy : Enemy
     protected override void Awake()
     {
         base.Awake();
-
-        stopGameChannel.OnValueEvent += StopGame;
     }
 
     protected override void Contact()
@@ -23,7 +21,7 @@ public class DynamicEnemy : Enemy
         RigidCompo.linearVelocity = dir.normalized * _speed;
     }
 
-    private void StopGame(bool value)
+    protected override void StopGame(bool value)
     {
         if (value)
         {

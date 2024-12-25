@@ -33,6 +33,12 @@ public abstract class Enemy : MonoBehaviour, IPoolable
 
         _playerPosEvent.OnEventRaised += SetTarget;
         _forcePush.OnValueEvent += ForcePush;
+        stopGameChannel.OnValueEvent += StopGame;
+    }
+
+    protected virtual void StopGame(bool obj)
+    {
+        isStop = obj;
     }
 
     private void OnEnable()
@@ -50,7 +56,7 @@ public abstract class Enemy : MonoBehaviour, IPoolable
     {
         if (canHit == false) return;
 
-        if (isDead == false)
+        if (isDead == false || isStop)
         {
             if (collision.gameObject.layer != 8)
             {
@@ -69,6 +75,7 @@ public abstract class Enemy : MonoBehaviour, IPoolable
     {
         _playerPosEvent.OnEventRaised -= SetTarget;
         _forcePush.OnValueEvent -= ForcePush;
+        stopGameChannel.OnValueEvent -= StopGame;
     }
 
     private void ForcePush(bool value)

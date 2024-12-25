@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada2321b105d7d94a80a8cc157ad2947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopGameChannel: {fileID: 11400000, guid: e84b6b0c882cb0b45beb148113de35d0, type: 2}
   _forcePush: {fileID: 11400000, guid: 33add52f0a6b9734682c4c37cc0ef6e6, type: 2}
   _playerPosEvent: {fileID: 11400000, guid: cdfb0d56966d23446bd3af0b00c33218, type: 2}
   _findPlayerEvent: {fileID: 11400000, guid: 045a3c000cc7e7d42bc6d0c7212b0d76, type: 2}
