@@ -1207,7 +1207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6431deeab4cb1e84aad50a2a9421e551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardListSO: {fileID: 0}
+  cardListSO: {fileID: 11400000, guid: 3a4164ef38d5a004daf1eedae992d4c2, type: 2}
   cardContainer: {fileID: 3596978182385477767}
   cardPrefab: {fileID: 3603049673869745315, guid: 866637a9aa7e6a24fa2033c4300d2480, type: 3}
   spawnTrms:

@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "MoveModerator")]
 public class MoveModerator : EventModerator<MoveModerator>
 {
-    public Rigidbody2D rigidCompo { get; private set; }
+    public Rigidbody2D rigidCompo { get; private set; } 
     public Vector2 moveDirection { get; private set; }
     public float MoveSpeed { get; set; }
     [SerializeField] private bool addToVelocity;

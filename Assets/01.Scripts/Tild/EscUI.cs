@@ -26,7 +26,7 @@ public class EscUI : MonoBehaviour
         {
             escPos.DOAnchorPosX(861, 0.7f).OnComplete(() => { isOpen = false; });
            
-            escAlpha.DOFade(1, 0.5f);
+            escAlpha.DOFade(0, 0.5f);
            
         }
     }

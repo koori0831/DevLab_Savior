@@ -32,11 +32,11 @@ public class GameOverUI : MonoBehaviour
         gameoverWindow.DOScale(Vector2.one, 0.7f);
         gameoverWindow.DOMoveY(0, 0.6f);
 
-        gameoverAlpha.DOFade(1, 1).OnComplete(() =>
+        gameoverAlpha.DOFade(1, 0.5f).OnComplete(() =>
         {
-           
-            retry.DOScaleY(0.93f, 0.15f).SetDelay(0.3f);
-            menu.DOScaleY(0.93f, 0.15f).SetDelay(0.4f);
+
+            retry.DOScaleY(0.93f, 0.15f);
+            menu.DOScaleY(0.93f, 0.15f).SetDelay(0.1f);
 
         });
     }
