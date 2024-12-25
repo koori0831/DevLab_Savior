@@ -115,5 +115,6 @@ public abstract class Enemy : MonoBehaviour, IPoolable
         isDead = false;
         canAttack = true;
         canHit = true;
+        isStop = false;
     }
 }
