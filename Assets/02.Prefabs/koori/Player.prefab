@@ -63,7 +63,7 @@ MonoBehaviour:
   expDetectRange: 0.5
   rigidBody: {fileID: 5235839605888427281}
   <bullet>k__BackingField: {fileID: 0}
-  moveModerator: {fileID: 11400000, guid: ad5886262f4412b41b5ded42c135f51e, type: 2}
+  moveModerator: {fileID: 11400000, guid: 5425368d99b99224fa252239bc2fb206, type: 2}
 --- !u!58 &2687087302745631187
 CircleCollider2D:
   m_ObjectHideFlags: 0
