@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] Vector2EventChannelSO attackEventChannel;
     [SerializeField] BoolEventChannelSO StopEventChannel;
     [SerializeField] float speed;
+    [SerializeField] CollisionEventChannelSO collisionEventChannel;
 
     public bool windowMove;
     private Vector2 _windowsPos;
@@ -53,6 +54,8 @@ public class Bullet : MonoBehaviour
         GameManager.Instance.CameraManager.ShakeCamera(0.1f, 0.1f);
 
         _windowsPos = rb.linearVelocity.normalized * 5;
+
+        collisionEventChannel.RaiseEvent(collision);
     }
 
 

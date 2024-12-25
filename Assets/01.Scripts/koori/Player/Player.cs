@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     private PlayerShield _shield;
 
     [SerializeField] Rigidbody2D rigidBody;
-    [SerializeField] Bullet bullet;
+    [field: SerializeField] public Bullet bullet { get; private set; }
     [SerializeField] MoveModerator moveModerator;
     public Transform BulletTrm => bullet.transform;
     private void Awake()
