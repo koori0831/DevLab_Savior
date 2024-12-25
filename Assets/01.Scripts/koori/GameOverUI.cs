@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameOverUI : MonoBehaviour
@@ -8,7 +9,7 @@ public class GameOverUI : MonoBehaviour
     [SerializeField] private RectTransform menu;
     private RectTransform gameoverWindow;
     private CanvasGroup gameoverAlpha;
-
+    [SerializeField] UnityEvent onUIDraw;
 
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class GameOverUI : MonoBehaviour
 
     public void PopUp()
     {
+        onUIDraw?.Invoke();
       
         gameoverWindow.gameObject.SetActive(true);
 

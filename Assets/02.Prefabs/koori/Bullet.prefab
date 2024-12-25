@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 4951753224662305425}
   screenWavePref: {fileID: 4409440987324628635, guid: aff3546df9fd67748924fe6431715d95, type: 3}
-  strength: 0.2
+  strength: 0.15
   duration: 0.5
 --- !u!114 &8574387115691183813
 MonoBehaviour:
