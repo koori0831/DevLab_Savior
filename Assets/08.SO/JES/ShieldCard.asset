@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f56c6c89ea2a548ab4cb998a47b53a, type: 3}
   m_Name: ShieldCard
   m_EditorClassIdentifier: 
-  cardIcon: {fileID: 834852548192020694, guid: 4dffe6eab57ca4e4ba2f967307bd1c29, type: 3}
+  cardIcon: {fileID: 21300000, guid: d795451bcffcbf947b79837793fe6674, type: 3}
   cardType: {fileID: 11400000, guid: 58626f100a4cf84459d4e075114a29af, type: 2}
   cardName: "\uC2E4\uB4DC"
   cardDescription: "\uC77C\uD68C\uC6A9 \uC2E4\uB4DC\uAC00\\n\uC0DD\uAE41\uB2C8\uB2E4."
