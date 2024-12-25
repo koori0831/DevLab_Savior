@@ -1,12 +1,13 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] VoidEventChannelSO findPlayerEvent;
     [SerializeField] TransformEventChannel playerPosEvent;
-    [SerializeField] Vector2EventChannelSO attackEventChannel;
+    [SerializeField] TransformEventChannel attackEventChannel;
     [SerializeField] BoolEventChannelSO gameOverEventChannel;
     [SerializeField] BoolEventChannelSO stopGameEventChannel;
     [SerializeField] IntEventChannelSO levelUpEventChannel;
@@ -20,7 +21,8 @@ public class Player : MonoBehaviour
     public int Level { get; private set; }
     private int _exp;
 
-
+    [SerializeField] private UnityEvent GetExpEvent;
+    
     private PlayerMover _mover;
     private PlayerShield _shield;
 
@@ -57,9 +59,8 @@ public class Player : MonoBehaviour
 
     private void HandleAttackEvent(bool prev, bool next)
     {
-        Debug.Log(next);
         if (next)
-            attackEventChannel.RaiseEvent(transform.position);
+            attackEventChannel.RaiseEvent(transform);
     }
     private void OnMove(Vector2 prev, Vector2 next)
     {
@@ -84,6 +85,7 @@ public class Player : MonoBehaviour
         Collider2D exp = Physics2D.OverlapCircle(transform.position, expDetectRange, expLayer);
         if (exp != null)
         {
+            GetExpEvent?.Invoke();
             Destroy(exp.gameObject);
             AddExp(expAdded);
         }

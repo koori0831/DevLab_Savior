@@ -18,7 +18,7 @@ MonoBehaviour:
     MulticlipsPlayMode: 3
     Clips:
     - AudioClip: {fileID: 8300000, guid: 3aebc99d71cb4564fa4a68efef979d10, type: 3}
-      Volume: 1
+      Volume: 1.2072139
       Delay: 0
       StartPosition: 0.104
       EndPosition: 0.511
@@ -26,7 +26,7 @@ MonoBehaviour:
       FadeOut: 0
       Weight: 0
     - AudioClip: {fileID: 8300000, guid: 4a8d2f7d44926634697119f07af2ac8f, type: 3}
-      Volume: 1
+      Volume: 1.405497
       Delay: 0
       StartPosition: 0.114
       EndPosition: 0.525
@@ -34,7 +34,7 @@ MonoBehaviour:
       FadeOut: 0
       Weight: 0
     - AudioClip: {fileID: 8300000, guid: 80af2bc3199fdfd4baefcf24ea48f5d1, type: 3}
-      Volume: 1
+      Volume: 1.3486981
       Delay: 0
       StartPosition: 0.093
       EndPosition: 0.597
@@ -42,7 +42,7 @@ MonoBehaviour:
       FadeOut: 0
       Weight: 0
     - AudioClip: {fileID: 8300000, guid: 5faaa8fd0d57ee742b3c3ac5006af815, type: 3}
-      Volume: 1
+      Volume: 1.2072139
       Delay: 0
       StartPosition: 0.113
       EndPosition: 0.483
@@ -50,7 +50,7 @@ MonoBehaviour:
       FadeOut: 0
       Weight: 0
     - AudioClip: {fileID: 8300000, guid: da48a18e2e3d65e4f8000ac584fcc930, type: 3}
-      Volume: 1
+      Volume: 1.2492628
       Delay: 0
       StartPosition: 0.113
       EndPosition: 0.506
@@ -58,7 +58,7 @@ MonoBehaviour:
       FadeOut: 0
       Weight: 0
     - AudioClip: {fileID: 8300000, guid: 41395213547b56744a058b49bd5877f8, type: 3}
-      Volume: 1
+      Volume: 1.413143
       Delay: 0
       StartPosition: 0.112
       EndPosition: 0.488
@@ -143,6 +143,33 @@ MonoBehaviour:
       Delay: 0
       StartPosition: 0.097
       EndPosition: 0.054
+      FadeIn: 0
+      FadeOut: 0
+      Weight: 0
+    <MasterVolume>k__BackingField: 1
+    <Loop>k__BackingField: 0
+    <SeamlessLoop>k__BackingField: 0
+    <TransitionTime>k__BackingField: 0
+    <SpatialSetting>k__BackingField: {fileID: 0}
+    <Priority>k__BackingField: 128
+    <Pitch>k__BackingField: 1
+    <PitchRandomRange>k__BackingField: 0
+    <VolumeRandomRange>k__BackingField: 0
+    <RandomFlags>k__BackingField: 0
+    SeamlessTransitionType: 0
+    TransitionTempo:
+      BPM: 0
+      Beats: 0
+    SnapToFullVolume: 0
+  - <Name>k__BackingField: GetExp
+    <ID>k__BackingField: 1073741841
+    MulticlipsPlayMode: 0
+    Clips:
+    - AudioClip: {fileID: 8300000, guid: b02697502fe68574f88d32b4ac162bce, type: 3}
+      Volume: 1
+      Delay: 0
+      StartPosition: 0.092
+      EndPosition: 0
       FadeIn: 0
       FadeOut: 0
       Weight: 0

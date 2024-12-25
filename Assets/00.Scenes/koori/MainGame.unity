@@ -1173,6 +1173,11 @@ MonoBehaviour:
   chooseCardChannel: {fileID: 11400000, guid: 1faa42136611ecb488bb6c268d4bca1a, type: 2}
   stopGameChannel: {fileID: 11400000, guid: e84b6b0c882cb0b45beb148113de35d0, type: 2}
   spawnDelay: 0.07
+--- !u!4 &1395504684 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5698564485024281032, guid: bb2246feebe6e5e418c1f410e9fd1e65, type: 3}
+  m_PrefabInstance: {fileID: 3596978182385477766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1426122980
 PrefabInstance:
   m_ObjectHideFlags: 0

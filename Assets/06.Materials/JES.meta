@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/01.Scripts/Core/Feedback.meta
+<<<<<<< Updated upstream
+guid: 9753ebca91147c24b9dbb436a4ecd72b
+=======
+guid: dbb243de86ede074493f42aec703043e
+>>>>>>> Stashed changes
+========
 guid: 1e96cc305a138aa47862bb34ac78ccd8
+>>>>>>>> Base:Assets/06.Materials/JES.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

@@ -3,16 +3,11 @@ using UnityEngine.Events;
 
 public class DynamicEnemy : Enemy
 {
-    [SerializeField] private float _speed;
+    [SerializeField] protected float _speed;
 
     private Vector2 _beforeVelocity;
 
     public UnityEvent OnReflectionEvent;
-
-    protected override void Awake()
-    {
-        base.Awake();
-    }
 
     protected override void Contact()
     {

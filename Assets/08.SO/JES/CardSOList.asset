@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: CardSOList
   m_EditorClassIdentifier: 
   cardSOList:
-  - {fileID: 11400000, guid: a4217a8cf9aa2d248aa4e2a7a1332f4c, type: 2}
   - {fileID: 11400000, guid: 943300ab7e7d84841a866f2673bd3631, type: 2}
+  - {fileID: 11400000, guid: 7d4fdca052ec31d459a6c4fddeae7f0d, type: 2}
   - {fileID: 11400000, guid: 482fd2c3986c1ed45ac9e9c2b8d2afc7, type: 2}
   - {fileID: 11400000, guid: b5e5036e9bfe87e449650055fe3d0e7f, type: 2}
+  - {fileID: 11400000, guid: a4217a8cf9aa2d248aa4e2a7a1332f4c, type: 2}
+  - {fileID: 11400000, guid: 575c6e9b510b09d4c87d2282d9934a97, type: 2}
+  - {fileID: 11400000, guid: a5b49a2b027beaf43b4e08e9a124eca3, type: 2}
+  - {fileID: 11400000, guid: c87702f317eee834b84e3504d6407616, type: 2}
