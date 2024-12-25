@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolName: RangeEnemy
   prefab: {fileID: 6820887067359435551, guid: 88a2a20d4ec970b489b5a85d0348bb29, type: 3}
-  count: 50
+  count: 5

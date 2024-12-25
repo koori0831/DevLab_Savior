@@ -53,7 +53,7 @@ public abstract class Enemy : MonoBehaviour, IPoolable
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (canHit == false) return;
 
@@ -81,7 +81,6 @@ public abstract class Enemy : MonoBehaviour, IPoolable
 
     private void ForcePush(bool value)
     {
-        Debug.Log(gameObject.activeSelf != value);
         if (gameObject.activeSelf != value)
             PoolManager.Instance.Push(this);
 
