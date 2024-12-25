@@ -9,11 +9,6 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.sceneLoaded += OnSceneLoad;
     }
-    private void Start()
-    {
-        gameOverUI.PopUp();
-    }
-
     private void OnSceneLoad(Scene arg0, LoadSceneMode arg1)
     {
         gameOverUI = FindAnyObjectByType<GameOverUI>();
