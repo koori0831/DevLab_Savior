@@ -94,6 +94,7 @@ public class Spawner : MonoBehaviour
         Vector2 position = new Vector2(x, y);
 
         int idx = Random.Range(0, _enemiesCnt);
+        Debug.Log(idx);
         string enemyTypeName = _poolables[idx].PoolName;
 
         Enemy enemy = PoolManager.Instance.Pop(enemyTypeName) as Enemy;
@@ -102,6 +103,7 @@ public class Spawner : MonoBehaviour
         if (enemy.TryGetComponent(out StaticEnemy staticEnemy))
         {
             staticEnemy.SetAble(false);
+            staticEnemy.SetCollider(false);
             staticEnemy.transform.localScale = new Vector3(0.3f, 0.3f, 1);
 
             position.x = Random.Range(-(_staticEnemyArea.x / 2), _staticEnemyArea.x / 2);
@@ -114,6 +116,7 @@ public class Spawner : MonoBehaviour
                 .OnComplete(() =>
                 {
                     staticEnemy.SetAble(true);
+                    staticEnemy.SetCollider(true);
                 });
         }
     }

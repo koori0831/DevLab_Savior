@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class ReflectionEnemy : DynamicEnemy
 {
+    [SerializeField] private LayerMask _whatIsWall;
     [SerializeField] private float _shotPower;
 
     private bool _isFirst = true;
+    [SerializeField] private Collider2D _collider;
 
     protected override void Contact()
     {
@@ -12,11 +14,14 @@ public class ReflectionEnemy : DynamicEnemy
         {
             _isFirst = false;
             RigidCompo.linearVelocity = (player.transform.position - transform.position).normalized * _speed;
+            _collider.enabled = true;
         }
         else
         {
             Attack();
         }
+
+        Debug.Log("¥Í¿Ω");
     }
 
     private void Attack()

@@ -94,6 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7668009069358868033}
   - component: {fileID: 8894531198612474088}
+  - component: {fileID: 8574387115691183813}
+  - component: {fileID: 5704045512309834928}
   m_Layer: 8
   m_Name: OnCollision
   m_TagString: Untagged
@@ -132,6 +134,34 @@ MonoBehaviour:
   screenWavePref: {fileID: 4409440987324628635, guid: aff3546df9fd67748924fe6431715d95, type: 3}
   strength: 0.2
   duration: 0.5
+--- !u!114 &8574387115691183813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4129094354431614660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9e487d681ccee46add820a2b8bda8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5704045512309834928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4129094354431614660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c2dd19ee4067b4ebbb9f88b49db767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundID:
+    ID: 1073741837
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
+    <DebugObject>k__BackingField: {fileID: 4129094354431614660}
 --- !u!1 &6696494148564015564
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +300,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -328,6 +358,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8894531198612474088}
         m_TargetAssemblyTypeName: ShockWavePlayer, Assembly-CSharp
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8574387115691183813}
+        m_TargetAssemblyTypeName: FeedbackPlayer, Assembly-CSharp
+        m_MethodName: PlayFeedbacks
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

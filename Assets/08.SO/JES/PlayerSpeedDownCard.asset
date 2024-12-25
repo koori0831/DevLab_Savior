@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239d4077a5850bc41af5ff8f4836c859, type: 3}
   m_Name: PlayerSpeedDownCard
   m_EditorClassIdentifier: 
-  cardIcon: {fileID: 21300000, guid: 8d8fcd591cdad453fb3c120cb0d3f43d, type: 3}
+  cardIcon: {fileID: 21300000, guid: 962c949aa7f6a8f48864957958bfe341, type: 3}
   cardType: {fileID: 11400000, guid: a60f834bfa1bc63498d72f9308f01318, type: 2}
   cardName: "\uC18D\uB3C4 \uAC10\uC18C"
   cardDescription: "\uD50C\uB808\uC774\uC5B4 \uC18D\uB3C4\uAC00\\n\uAC10\uC18C\uD569\uB2C8\uB2E4."
