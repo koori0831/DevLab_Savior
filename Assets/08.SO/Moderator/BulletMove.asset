@@ -15,4 +15,5 @@ MonoBehaviour:
   onEvent:
     m_PersistentCalls:
       m_Calls: []
-  moveSpeed: 12
+  addToVelocity: 0
+  moveSpeed: 10

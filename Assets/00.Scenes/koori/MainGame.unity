@@ -967,17 +967,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4605731820541177450, guid: cc61941ed720f2e468f4a57432d8d00d, type: 3}
-      propertyPath: collisionEventChannel
+      propertyPath: followTarget
       value: 
-      objectReference: {fileID: 11400000, guid: cc19883ea5d3d1c4ab620a9ce37a128e, type: 2}
+      objectReference: {fileID: 1395504684}
+    - target: {fileID: 4605731820541177450, guid: cc61941ed720f2e468f4a57432d8d00d, type: 3}
+      propertyPath: attackEventChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 27e60d32e9208624e919e7d7cd0f2d3a, type: 2}
     - target: {fileID: 6696494148564015564, guid: cc61941ed720f2e468f4a57432d8d00d, type: 3}
       propertyPath: m_Name
       value: Bullet
       objectReference: {fileID: 0}
-    - target: {fileID: 8894531198612474088, guid: cc61941ed720f2e468f4a57432d8d00d, type: 3}
-      propertyPath: rigidBody
-      value: 
-      objectReference: {fileID: 1430881428}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1226,6 +1226,11 @@ MonoBehaviour:
   chooseCardChannel: {fileID: 11400000, guid: 1faa42136611ecb488bb6c268d4bca1a, type: 2}
   stopGameChannel: {fileID: 11400000, guid: e84b6b0c882cb0b45beb148113de35d0, type: 2}
   spawnDelay: 0.07
+--- !u!4 &1395504684 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5698564485024281032, guid: bb2246feebe6e5e418c1f410e9fd1e65, type: 3}
+  m_PrefabInstance: {fileID: 3596978182385477766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1426122980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1294,11 +1299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b939668b9115aff4daa51bf0ed2c14cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &1430881428 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 4951753224662305425, guid: cc61941ed720f2e468f4a57432d8d00d, type: 3}
-  m_PrefabInstance: {fileID: 917332145}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1513786948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,6 +1611,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7356334587113868476, guid: bb2246feebe6e5e418c1f410e9fd1e65, type: 3}
+      propertyPath: attackEventChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 27e60d32e9208624e919e7d7cd0f2d3a, type: 2}
     - target: {fileID: 7356334587113868476, guid: bb2246feebe6e5e418c1f410e9fd1e65, type: 3}
       propertyPath: <bullet>k__BackingField
       value: 
