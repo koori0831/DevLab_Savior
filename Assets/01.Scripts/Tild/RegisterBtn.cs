@@ -10,7 +10,8 @@ public class RegisterBtn : MonoBehaviour
     private string[] bannedWords =
     {
         "시발", "섹스", "병신", "ㅄ", "ㅅㅂ",
-        "ㅆㅂ", "씨발", "새끼", "ㅅㄲ", "좆","보지","자지","짬지","ㅂㅈ","ㅈㅈ","ㅈ"
+        "ㅆㅂ", "씨발", "새끼", "ㅅㄲ", "좆","보지","자지","짬지","ㅂㅈ","ㅈㅈ","ㅈ","장애","애미","운지","노무현","윤석열","부엉이바위","웃흥",
+        
     };
 
     public void OnRegisterButtonClick()
@@ -44,7 +45,9 @@ public class RegisterBtn : MonoBehaviour
         // 모든 조건을 만족한 경우 이벤트 실행
         ExecuteEvent();
     }
-
+    public void OnRigisFail(){
+         inputField.text = "등록에 실패했습니다";
+    }
     private void ExecuteEvent()
     {
         OnSuccess.Invoke();

@@ -11,8 +11,9 @@ public class Leaderboard_PlayerUI : MonoBehaviour
     [SerializeField] TMP_Text playerID;
     public void SetPlayerUI(string name, string score, string id)
     {
+        int time = int.Parse(score);
         playerName.text = name;
-        playerScore.text = score;
+        playerScore.text = $"{time/60}분 {time%60}초";
         playerID.text = $"ID : {id}";
     }
 
