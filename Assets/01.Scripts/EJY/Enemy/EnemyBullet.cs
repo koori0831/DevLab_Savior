@@ -12,6 +12,7 @@ public class EnemyBullet : MonoBehaviour, IPoolable
     private float _currentLifeTime = 0;
 
     private bool _isDead = false;
+    private bool _isStop = false;
 
     private Rigidbody2D _rigidCompo;
     private TrailRenderer _trailRendererCompo;
@@ -35,6 +36,7 @@ public class EnemyBullet : MonoBehaviour, IPoolable
     {
         if(_isDead) return;
 
+        if(!_isStop)
         _currentLifeTime += Time.deltaTime;
 
         if (_currentLifeTime > _lifeTime)
@@ -59,6 +61,8 @@ public class EnemyBullet : MonoBehaviour, IPoolable
 
     private void StopGame(bool value)
     {
+        _isStop = value;
+
         if (value)
         {
             _beforeVelocity = _rigidCompo.linearVelocity;

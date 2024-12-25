@@ -573,6 +573,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullet
       objectReference: {fileID: 0}
+    - target: {fileID: 8894531198612474088, guid: cc61941ed720f2e468f4a57432d8d00d, type: 3}
+      propertyPath: strength
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -912,7 +916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5910175716266417750, guid: be136691df62b504293387c4ee9a7a25, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 20863.406
+      value: 120351.03
       objectReference: {fileID: 0}
     - target: {fileID: 6886522896124651398, guid: be136691df62b504293387c4ee9a7a25, type: 3}
       propertyPath: m_Size

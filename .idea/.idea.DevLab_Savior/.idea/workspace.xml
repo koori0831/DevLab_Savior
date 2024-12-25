@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51551f16-1008-4964-8e10-20782afc1f39" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DevLab_Savior/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DevLab_Savior/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Scenes/JEs/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Scenes/JEs/MainGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scripts/EJY/Enemy/DynamicEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scripts/EJY/Enemy/DynamicEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scripts/EJY/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scripts/EJY/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scripts/koori/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scripts/koori/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Prefabs/EJY/MeleeEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Prefabs/EJY/MeleeEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.SO/JES/BulletSpeeDownCard.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.SO/JES/BulletSpeeDownCard.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.SO/JES/BulletSpeedUpCard.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.SO/JES/BulletSpeedUpCard.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.SO/JES/CardSOList.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.SO/JES/CardSOList.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.SO/JES/PlayerSpeedDownCard.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.SO/JES/PlayerSpeedDownCard.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.SO/Moderator/New Move Moderator.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.SO/Moderator/New Move Moderator.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="51551f16-1008-4964-8e10-20782afc1f39" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +15,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/01.Scripts/JES/CardSOList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/01.Scripts/JES/EnemySpeedCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/01.Scripts/JES/KeepShieldCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/01.Scripts/JES/SoundFeedback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/01.Scripts/JES/WindowOnCard.cs" root0="FORCE_HIGHLIGHTING" />
