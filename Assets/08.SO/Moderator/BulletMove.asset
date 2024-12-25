@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150696e8474aa094384b2bc127a5996d, type: 3}
   m_Name: BulletMove
   m_EditorClassIdentifier: 
+  onEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  addToVelocity: 0
+  moveSpeed: 10
