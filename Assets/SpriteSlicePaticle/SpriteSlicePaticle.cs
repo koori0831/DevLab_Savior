@@ -16,5 +16,10 @@ public class SpriteSlicePaticle : MonoBehaviour
         rendererCompo.material = new Material(rendererCompo.material);
         rendererCompo.material.SetFloat(columnID, column);
         rendererCompo.material.SetFloat(rowID, row);
+
+        ParticleSystem.MinMaxCurve randomIndex = new ParticleSystem.MinMaxCurve();
+        randomIndex.constantMax = column * (row - 1);
+        ParticleSystem.CustomDataModule customData = particleCompo.customData;
+        particleCompo.customData.SetVector(ParticleSystemCustomData.Custom1, 1, randomIndex);
     }
 }
