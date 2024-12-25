@@ -369,6 +369,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< HEAD
   controlID: 47
 =======
 =======
@@ -384,6 +385,9 @@ MonoBehaviour:
 =======
   controlID: 11237
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+  controlID: 11237
+>>>>>>> origin/koori
   draggingID: 0
 >>>>>>> Base
 --- !u!114 &5
@@ -406,16 +410,22 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 948.8
     height: 462.4
   m_MinSize: {x: 201, y: 226}
   m_MaxSize: {x: 4001, y: 4026}
 =======
+=======
+>>>>>>> origin/koori
     width: 590
     height: 545
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+<<<<<<< HEAD
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+>>>>>>> origin/koori
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -626,6 +636,7 @@ MonoBehaviour:
       index: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":24.799999237060548},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 0
       collapsed: 0
@@ -641,6 +652,12 @@ MonoBehaviour:
 >>>>>>> 4590f18 (ADD : EnemyAya)
 =======
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":25.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 25}
+>>>>>>> origin/koori
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       layout: 1
@@ -667,6 +684,7 @@ MonoBehaviour:
       index: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       contents: '{"m_Layout":2,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":24.799999237060548},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 0
       collapsed: 0
@@ -682,6 +700,12 @@ MonoBehaviour:
 >>>>>>> 4590f18 (ADD : EnemyAya)
 =======
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+      contents: '{"m_Layout":2,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":25.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 25}
+>>>>>>> origin/koori
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       layout: 2
@@ -1002,6 +1026,7 @@ MonoBehaviour:
       index: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":24.799999237060548},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 0
       collapsed: 0
@@ -1017,6 +1042,12 @@ MonoBehaviour:
 >>>>>>> 4590f18 (ADD : EnemyAya)
 =======
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":25.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 25}
+>>>>>>> origin/koori
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       layout: 1
@@ -1071,6 +1102,7 @@ MonoBehaviour:
       index: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":-270.4000244140625,"y":-127.19999694824219},"m_SnapOffsetDelta":{"x":0.0,"y":0.0000152587890625},"m_FloatingSnapCorner":3,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 0
       collapsed: 0
@@ -1090,6 +1122,14 @@ MonoBehaviour:
 >>>>>>> 4590f18 (ADD : EnemyAya)
 =======
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":25.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+>>>>>>> origin/koori
       layout: 1
       size: {x: 0, y: 0}
       sizeOverridden: 0
@@ -1392,6 +1432,7 @@ MonoBehaviour:
     m_Text: Animator
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
 =======
     m_Image: {fileID: -1673928668082335149, guid: 0000000000000000d000000000000000, type: 0}
@@ -1399,6 +1440,9 @@ MonoBehaviour:
 =======
     m_Image: {fileID: -1673928668082335149, guid: 0000000000000000d000000000000000, type: 0}
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+    m_Image: {fileID: -1673928668082335149, guid: 0000000000000000d000000000000000, type: 0}
+>>>>>>> origin/koori
     m_Tooltip: 
     m_TextWithWhitespace: "Animator\u200B"
   m_Pos:
@@ -4020,11 +4064,11 @@ MonoBehaviour:
     x: 948.8
 >>>>>>> Base
     y: 0
-    width: 280.8
-    height: 462.4
+    width: 473
+    height: 545
   m_MinSize: {x: 202, y: 226}
   m_MaxSize: {x: 4002, y: 4026}
-  m_ActualView: {fileID: 11}
+  m_ActualView: {fileID: 2}
   m_Panes:
 <<<<<<< HEAD
   - {fileID: 9}
@@ -4044,6 +4088,32 @@ MonoBehaviour:
   m_LastSelected: 0
 --- !u!114 &12
 >>>>>>> ee34d4c (feat : MainScene)
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneHierarchyWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1063
+    y: 0
+    width: 317
+    height: 545
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
+  m_ActualView: {fileID: 12}
+  m_Panes:
+  - {fileID: 12}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4180,9 +4250,13 @@ MonoBehaviour:
   m_Enabled: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_EditorHideFlags: 0
+=======
+  m_EditorHideFlags: 1
+>>>>>>> origin/koori
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -4425,6 +4499,7 @@ MonoBehaviour:
     m_Folders:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/01.Scripts/Tild
 =======
     - Assets/07.Audio/SFX/koori
@@ -4432,6 +4507,9 @@ MonoBehaviour:
 =======
     - Assets/00.Scenes/Game
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+    - Assets/00.Scenes/Game
+>>>>>>> origin/koori
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -4455,9 +4533,9 @@ MonoBehaviour:
     m_ExpandedIDs: ffffffff0000000070cf000072cf000074cf000076cf000078cf00007acf00007ccf00007ecf000080cf000082cf000084cf000086cf000016d0000018d000001cd000001ed0000022d0000026d000002cd0000030d0000032d0000038d0000050d000008ad00000cad10000ccd100007a1d0100901d0100804a0100b24a0100684c01006a4c01006c4c01006e4c0100704c010096690100e2750100b68001002c890100
 =======
   m_LastFolders:
-  - Assets/01.Scripts/Tild
+  - Assets/00.Scenes/Game
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: E:\DevLab\DevLab_Savior
+  m_LastProjectPath: E:\unity_project\DevLab_Savior
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -4508,6 +4586,7 @@ MonoBehaviour:
       m_TrimLeadingAndTrailingWhitespace: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 14}
 =======
       m_ClientGUIView: {fileID: 13}
@@ -4515,6 +4594,9 @@ MonoBehaviour:
 =======
       m_ClientGUIView: {fileID: 13}
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+      m_ClientGUIView: {fileID: 13}
+>>>>>>> origin/koori
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -4580,6 +4662,7 @@ MonoBehaviour:
     m_LastClickedInstanceID: 54240
 >>>>>>> Base
     m_HadKeyboardFocusLastEvent: 0
+<<<<<<< HEAD
     m_ExpandedInstanceIDs: c6230000f0620000d062000014630000406c000082700000607000007202000040810000469500008c0200008a020000747b000002a2000006a20000ea9d0000629a000076c00000428b000062740000a07b0000f80200003473000054730000527000001c8200001e82000004760000e0730000a6020000bcb00000a0b00000fcb10000ecb100008cae00001abb000092c400005ebe000062be00005abe000000000000
 =======
     m_SelectedInstanceIDs: 
@@ -4593,6 +4676,9 @@ MonoBehaviour:
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000f0620000d062000014630000406c000082700000607000007202000040810000469500008c020000000000008a020000747b000002a2000006a20000ea9d0000629a000076c00000428b000062740000a07b0000f80200003473000054730000527000001c8200001e82000004760000e0730000a6020000bcb00000a0b00000fcb10000ecb100008cae00001abb000092c400005ebe000062be00005abe000072acffff58b6ffff
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+    m_ExpandedInstanceIDs: c6230000f0620000d062000014630000406c000082700000607000007202000040810000469500008c020000000000008a020000747b000002a2000006a20000ea9d0000629a000076c00000428b000062740000a07b0000f80200003473000054730000527000001c8200001e82000004760000e0730000a6020000bcb00000a0b00000fcb10000ecb100008cae00001abb000092c400005ebe000062be00005abe000072acffff58b6ffff
+>>>>>>> origin/koori
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4655,6 +4741,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 62
     y: 624
     width: 1486
@@ -4668,6 +4755,11 @@ MonoBehaviour:
     y: 624
     width: 1379
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+    x: 65
+    y: 624
+    width: 1379
+>>>>>>> origin/koori
     height: 410
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -4720,6 +4812,7 @@ MonoBehaviour:
     m_IsLocked: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastSelectedObjectID: -246976
 --- !u!114 &18
 =======
@@ -4730,6 +4823,10 @@ MonoBehaviour:
   m_LastSelectedObjectID: -315734
 --- !u!114 &17
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+  m_LastSelectedObjectID: -315734
+--- !u!114 &17
+>>>>>>> origin/koori
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4746,12 +4843,17 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1229.6
+=======
+    x: 1380
+>>>>>>> origin/koori
     y: 0
-    width: 306.40002
-    height: 716.8
+    width: 475
+    height: 981
   m_MinSize: {x: 276, y: 76}
   m_MaxSize: {x: 4001, y: 4026}
+<<<<<<< HEAD
   m_ActualView: {fileID: 19}
 =======
     x: 1380
@@ -4771,6 +4873,9 @@ MonoBehaviour:
   m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 18}
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+  m_ActualView: {fileID: 18}
+>>>>>>> origin/koori
   m_Panes:
   - {fileID: 18}
   m_Selected: 0
@@ -4798,6 +4903,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1229.6
     y: 79.200005
     width: 305.40002
@@ -4805,14 +4911,19 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+>>>>>>> origin/koori
     x: 1445
     y: 79
     width: 474
     height: 955
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4590f18 (ADD : EnemyAya)
 =======
 >>>>>>> ee34d4c (feat : MainScene)
+=======
+>>>>>>> origin/koori
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
