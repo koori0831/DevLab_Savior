@@ -27,7 +27,8 @@ public class Bullet : MonoBehaviour
     private void Stop(bool obj)
     {
         if (obj) rb.linearVelocity = Vector2.zero;
-        stopValue = obj ? 1 : 0;
+        stopValue = obj ? 0 : 1;
+        Debug.Log($"stop {stopValue} {obj}");  
     }
 
     private void OnDestroy()
@@ -44,7 +45,6 @@ public class Bullet : MonoBehaviour
 
     private void Move(Vector2 playerPos)
     {
-        Debug.Log("Move");  
         bulletMove.Initialize(rb, (playerPos - (Vector2)transform.position).normalized * stopValue);
         bulletMove.ExecuteEvent();
     }
