@@ -5,7 +5,7 @@ public class GameStart : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("MainGame");
+        FadeManager.Instance.FadeSceneChange("MainScene", 1);
     }
 
     public void QuitGame()
