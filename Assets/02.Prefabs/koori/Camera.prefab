@@ -125,8 +125,62 @@ Transform:
   - {fileID: 1915144701334967157}
   - {fileID: 5787179820800742401}
   - {fileID: 2954647672825963141}
+  - {fileID: 5667856417413766690}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3384154935808823555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5667856417413766690}
+  - component: {fileID: 6108341609371107014}
+  m_Layer: 0
+  m_Name: BGMPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5667856417413766690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3384154935808823555}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1934377717796439668}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6108341609371107014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3384154935808823555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onlyPlayOnce: 0
+  _playOnEnable: 1
+  _stopOnDisable: 0
+  _overrideFadeOut: -1
+  _sound:
+    ID: 268435459
+    _sourceAsset: {fileID: 11400000, guid: e9dc211b3233bd747986f62f1e87a8a2, type: 2}
+    <DebugObject>k__BackingField: {fileID: 3384154935808823555}
+  _positionMode: 0
 --- !u!1 &8987722703074877027
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +191,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5787179820800742401}
   - component: {fileID: 3801717921551627379}
-  - component: {fileID: 8888095185898916620}
   - component: {fileID: 6515264947841173601}
   - component: {fileID: 6673785049982974352}
   m_Layer: 0
@@ -213,14 +266,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &8888095185898916620
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8987722703074877027}
-  m_Enabled: 1
 --- !u!114 &6515264947841173601
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,11 +9,11 @@ public class BtnEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     private TMP_Text _text;
     private Vector2 scaleTemp;
     private Vector2 scaledScaleTemp;
-    private SoundSource hoverSound;
+    [SerializeField] private SoundID hoverSound;
+    [SerializeField] private SoundID clickSound;
 
     private void Awake()
     {
-        hoverSound = GetComponent<SoundSource>();
         _text = GetComponentInChildren<TMP_Text>();
         scaleTemp = _text.transform.localScale;
         scaledScaleTemp = scaleTemp * 0.92f;
@@ -21,7 +21,7 @@ public class BtnEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        //hoverSound.Play();  
+        BroAudio.Play(hoverSound);
         _text.transform.DORotate(new Vector3(0, 0, 5), 0.4f);
     }
 
@@ -33,6 +33,7 @@ public class BtnEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        BroAudio.Play(clickSound);
         _text.transform.DOScale(scaleTemp, 0.2f).SetEase(Ease.OutSine);
     }
 
