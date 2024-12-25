@@ -1,6 +1,7 @@
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -20,6 +21,9 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, I
 
     private CardSO _cardSO;
     private CardContainer _cardContainer;
+    
+    [SerializeField] private UnityEvent OnMouseEnterEvent;
+    [SerializeField] private UnityEvent OnMouseClickEvent;
     private void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
@@ -53,11 +57,13 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, I
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        OnMouseClickEvent?.Invoke();
         _cardContainer.AddCard(_cardSO);
         chooseCardChannel.RaiseEvent(true);
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
+        OnMouseEnterEvent?.Invoke();
         DoScale(_originScale*1.2f);
     }
     public void OnPointerExit(PointerEventData eventData)

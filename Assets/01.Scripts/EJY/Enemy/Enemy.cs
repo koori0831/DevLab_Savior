@@ -13,6 +13,7 @@ public abstract class Enemy : MonoBehaviour, IPoolable
 
     [SerializeField] private string _poolName;
 
+
     public Rigidbody2D RigidCompo { get; private set; }
 
     public UnityEvent OnDeadEvent;

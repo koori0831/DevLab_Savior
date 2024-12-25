@@ -10,8 +10,6 @@ public class RangeEnemy : StaticEnemy
 
     protected override void Update()
     {
-        Debug.Log(player);
-        Debug.Log(isStop);
         if (player == null)
             return;
 

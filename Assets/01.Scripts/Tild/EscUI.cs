@@ -12,6 +12,7 @@ public class EscUI : MonoBehaviour
     {
         escPos = GetComponent<RectTransform>();
         escAlpha = GetComponent<CanvasGroup>();
+        
     }
 
     public void OpenOrClose()
