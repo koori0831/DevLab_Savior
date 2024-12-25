@@ -16,4 +16,4 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   addToVelocity: 0
-  moveSpeed: 10
+  moveSpeed: 6
