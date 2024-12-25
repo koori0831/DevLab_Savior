@@ -83,6 +83,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _speed: 8
+  _moveModerator: {fileID: 11400000, guid: 1591c535f6c96fc46a0093551c6cadbf, type: 2}
   OnReflectionEvent:
     m_PersistentCalls:
       m_Calls: []

@@ -65,7 +65,7 @@ public abstract class Enemy : MonoBehaviour, IPoolable
             }
             else
             {
-                Debug.Assert(canHit, "¾È¸Â¾Æ¾ßÇÏ´Âµ¥ Á×¾ú¾î");
+                Debug.Assert(canHit, "ï¿½È¸Â¾Æ¾ï¿½ï¿½Ï´Âµï¿½ ï¿½×¾ï¿½ï¿½ï¿½");
                 SetDead();
             }
         }
@@ -101,6 +101,7 @@ public abstract class Enemy : MonoBehaviour, IPoolable
 
     public virtual void SetDead()
     {
+        
         isDead = true;
         OnDeadEvent?.Invoke();
     }
