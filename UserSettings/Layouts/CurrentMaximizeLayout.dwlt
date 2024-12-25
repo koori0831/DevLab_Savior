@@ -26,7 +26,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 41731
+  controlID: 55284
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 41732
+  controlID: 55285
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -247,10 +247,10 @@ MonoBehaviour:
       displayed: 1
       id: unity-scene-view-toolbar
       index: 0
-      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":25.333332061767579},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 0
       collapsed: 0
-      snapOffset: {x: 24, y: 0}
+      snapOffset: {x: 24, y: 25.333332}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       layout: 1
@@ -275,10 +275,10 @@ MonoBehaviour:
       displayed: 1
       id: unity-transform-toolbar
       index: 0
-      contents: '{"m_Layout":2,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      contents: '{"m_Layout":2,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":25.333332061767579},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 0
       collapsed: 0
-      snapOffset: {x: 24, y: 0}
+      snapOffset: {x: 24, y: 25.333332}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       layout: 2
@@ -597,10 +597,10 @@ MonoBehaviour:
       displayed: 1
       id: unity-scene-view-camera-mode-toolbar
       index: 1
-      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":25.333332061767579},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 0
       collapsed: 0
-      snapOffset: {x: 24, y: 0}
+      snapOffset: {x: 24, y: 25.333332}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       layout: 1
@@ -653,10 +653,10 @@ MonoBehaviour:
       displayed: 1
       id: Overlays/OverlayMenu
       index: 1
-      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":25.333332061767579},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 0
       collapsed: 0
-      snapOffset: {x: 24, y: 0}
+      snapOffset: {x: 24, y: 25.333332}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       layout: 1
@@ -773,9 +773,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -1.7822669, y: 0.09001285, z: -3.2954135}
+    m_Target: {x: 0.05919999, y: -0.5202218, z: -3.24339}
     speed: 2
-    m_Value: {x: -1.7822669, y: 0.09001285, z: -3.2954135}
+    m_Value: {x: 0.05919999, y: -0.5202218, z: -3.24339}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -825,9 +825,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.771958
+    m_Target: 1.5695244
     speed: 2
-    m_Value: 6.771958
+    m_Value: 1.5695244
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -923,7 +923,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -396862
+  m_LastSelectedObjectID: -506030
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -943,8 +943,8 @@ MonoBehaviour:
     y: 0
     width: 242
     height: 968
-  m_MinSize: {x: 202, y: 226}
-  m_MaxSize: {x: 4002, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 9}
   m_Panes:
   - {fileID: 9}
@@ -989,9 +989,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c2f1f9ff
-      m_LastClickedID: -396862
-      m_ExpandedIDs: 4479faff9e7afaffa07afaffdaa5fbff46a6fbffcaa6fbfffe55fdff4256fdff6256fdff3457fdff3a66fdff5667fdffec3dffffb63effff783ffffffea7ffff82a9ffffaad6fffff2d6ffffa0d9ffffa4f7fffffaf7ffff9c180100a619010076460100
+      m_SelectedIDs: 6ac40000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 283cf8ff5247f8ff6e29f9ff7029f9ff4479faff9e7afaffa07afaffdaa5fbff46a6fbffcaa6fbfffe55fdff4256fdff6256fdff3457fdff3a66fdff5667fdffec3dffffb63effff783ffffffea7ffff82a9ffffaad6fffff2d6ffffa0d9ffffa4f7fffffaf7fffff4ffffff9c180100a619010076460100f6590100105a01000481010026810100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1035,8 +1035,8 @@ MonoBehaviour:
     y: 0
     width: 371.3333
     height: 968
-  m_MinSize: {x: 277, y: 76}
-  m_MaxSize: {x: 4002, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -1201,7 +1201,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/07.Audio/SFX/JEs
+    - Assets/08.SO/JES
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1219,7 +1219,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 08060000
     m_LastClickedID: 1544
-    m_ExpandedIDs: ffffffff0000000070cf000072cf000074cf000076cf000078cf00007acf00007ccf00007ecf000080cf000082cf000084cf000086cf000016d0000018d000001cd0000022d0000026d0000030d0000032d0000038d0000050d000008ad00000cad10000ccd100007a1d0100901d0100b24a0100684c01006a4c01006c4c01006e4c0100704c0100c24c010096690100
+    m_ExpandedIDs: ffffffff0000000070cf000072cf000074cf000076cf000078cf00007acf00007ccf00007ecf000080cf000082cf000084cf000086cf000016d0000018d000001cd000001ed0000022d0000026d000002cd0000030d0000032d0000038d0000050d000008ad00000cad10000ccd100007a1d0100901d0100804a0100b24a0100684c01006a4c01006c4c01006e4c0100704c0100c24c0100c84c010096690100e2750100b68001002c890100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1245,10 +1245,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 708}
-    m_SelectedIDs: c2f1f9ff
-    m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff0000000070cf000072cf000074cf000076cf000078cf00007acf00007ccf00007ecf000080cf000082cf000084cf000086cf000016d0000018d000001cd0000022d0000026d0000030d0000032d0000038d0000050d000008ad00000cad10000ccd100007a1d0100901d0100b24a0100684c01006a4c01006c4c01006e4c0100704c0100c24c010096690100
+    scrollPos: {x: 0, y: 1500}
+    m_SelectedIDs: 6ac40000
+    m_LastClickedID: 50282
+    m_ExpandedIDs: ffffffff0000000070cf000072cf000074cf000076cf000078cf00007acf00007ccf00007ecf000080cf000082cf000084cf000086cf000016d0000018d000001cd000001ed0000022d0000026d000002cd0000030d0000032d0000038d0000050d000008ad00000cad10000ccd100007a1d0100901d0100804a0100b24a0100684c01006a4c01006c4c01006e4c0100704c0100c24c0100c84c010096690100e2750100b68001002c890100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1274,8 +1274,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c2f1f9ff
-    m_LastClickedInstanceID: -396862
+    m_SelectedInstanceIDs: 6ac40000
+    m_LastClickedInstanceID: 50282
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:

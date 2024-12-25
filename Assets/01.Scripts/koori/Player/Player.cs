@@ -1,7 +1,9 @@
 using System;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -21,6 +23,7 @@ public class Player : MonoBehaviour
     public int Level { get; private set; }
     private int _exp;
 
+    [SerializeField] private Image expBar;
     [SerializeField] private UnityEvent GetExpEvent;
     
     private PlayerMover _mover;
@@ -30,6 +33,7 @@ public class Player : MonoBehaviour
     [field: SerializeField] public Bullet bullet { get; private set; }
     [SerializeField] MoveModerator moveModerator;
     public Transform BulletTrm => bullet.transform;
+    public Bullet Bullet => bullet;
     private void Awake()
     {
         PlayerControl(true);
@@ -100,10 +104,14 @@ public class Player : MonoBehaviour
             Level++;
             levelUpEventChannel.RaiseEvent(Level);
         }
+
+        expBar.DOFillAmount((float)_exp / 30, 0.7f);
     }
 
+    [SerializeField] private UnityEvent OnDeadEvent;
     public void GameOver()
     {
+        OnDeadEvent?.Invoke();
         PlayerControl(false);
         GameManager.Instance.UIManager.GameOverPopup(true);
         gameOverEventChannel.RaiseEvent(true);

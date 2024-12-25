@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: New Move Moderator
-  m_EditorClassIdentifier: Assembly-CSharp::MoveModerator
+  m_Script: {fileID: 11500000, guid: 150696e8474aa094384b2bc127a5996d, type: 3}
+  m_Name: EnemyMove
+  m_EditorClassIdentifier: 
   onEvent:
     m_PersistentCalls:
       m_Calls: []
+  addToVelocity: 0
   moveSpeed: 8

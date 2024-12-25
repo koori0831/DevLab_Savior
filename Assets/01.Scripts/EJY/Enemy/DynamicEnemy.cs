@@ -4,16 +4,18 @@ using UnityEngine.Events;
 public class DynamicEnemy : Enemy
 {
     [SerializeField] protected float _speed;
-
+    [SerializeField] MoveModerator _moveModerator;
     private Vector2 _beforeVelocity;
 
     public UnityEvent OnReflectionEvent;
-
+    
+    
     protected override void Contact()
     {
         Vector2 dir = (Vector2)player.transform.position  - (Vector2)transform.position;
 
-        RigidCompo.linearVelocity = dir.normalized * _speed;
+        _moveModerator.Initialize(RigidCompo,dir);
+        _moveModerator.ExecuteEvent();
     }
 
     protected override void StopGame(bool value)
