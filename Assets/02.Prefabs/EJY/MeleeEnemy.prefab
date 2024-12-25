@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8442287528e914facee2de5341c95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _forcePush: {fileID: 11400000, guid: 33add52f0a6b9734682c4c37cc0ef6e6, type: 2}
+  stopGameChannel: {fileID: 11400000, guid: e84b6b0c882cb0b45beb148113de35d0, type: 2}
   _playerPosEvent: {fileID: 11400000, guid: cdfb0d56966d23446bd3af0b00c33218, type: 2}
   _findPlayerEvent: {fileID: 11400000, guid: 045a3c000cc7e7d42bc6d0c7212b0d76, type: 2}
   _poolName: MeleeEnemy
@@ -355,8 +357,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1673599183
-  m_SortingLayer: -4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 4b40fc0f65c85f14fbc9c7c5f40ca686, type: 3}
   m_Color: {r: 1, g: 0.26226407, b: 0.26226407, a: 1}
