@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] VoidEventChannelSO findPlayerEvent;
     [SerializeField] TransformEventChannel playerPosEvent;
-    [SerializeField] Vector2EventChannelSO attackEventChannel;
+    [SerializeField] TransformEventChannel attackEventChannel;
     [SerializeField] BoolEventChannelSO gameOverEventChannel;
     [SerializeField] BoolEventChannelSO stopGameEventChannel;
     [SerializeField] IntEventChannelSO levelUpEventChannel;
@@ -57,9 +57,8 @@ public class Player : MonoBehaviour
 
     private void HandleAttackEvent(bool prev, bool next)
     {
-        Debug.Log(next);
         if (next)
-            attackEventChannel.RaiseEvent(transform.position);
+            attackEventChannel.RaiseEvent(transform);
     }
     private void OnMove(Vector2 prev, Vector2 next)
     {
