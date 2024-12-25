@@ -1607,6 +1607,10 @@ PrefabInstance:
       propertyPath: <bullet>k__BackingField
       value: 
       objectReference: {fileID: 917332146}
+    - target: {fileID: 8975746964806914048, guid: bb2246feebe6e5e418c1f410e9fd1e65, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

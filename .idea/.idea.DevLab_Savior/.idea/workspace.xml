@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51551f16-1008-4964-8e10-20782afc1f39" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DevLab_Savior/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DevLab_Savior/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00.Scenes/JEs/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Scenes/JEs/MainGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00.Scenes/koori/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Scenes/koori/MainGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scripts/JES/PlayerShield.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scripts/JES/PlayerShield.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/06.Materials/Chipmunk/WaveMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/06.Materials/Chipmunk/WaveMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.SO/Moderator/BulletMove.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.SO/Moderator/BulletMove.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Extra/Typewriter Sound - Package.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Integrations/PlayMaker - Integration.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Integrations/Visual Scripting - Integration.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scripts/Chipmunk/EventModerator/MoveModerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scripts/Chipmunk/EventModerator/MoveModerator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
