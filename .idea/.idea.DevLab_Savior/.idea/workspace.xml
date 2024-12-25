@@ -7,11 +7,8 @@
     <list default="true" id="51551f16-1008-4964-8e10-20782afc1f39" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DevLab_Savior/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DevLab_Savior/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00.Scenes/JEs/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00.Scenes/JEs/MainGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scripts/JES/PlayerShield.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scripts/JES/PlayerShield.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Prefabs/EJY/EnemyBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Prefabs/EJY/EnemyBullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/06.Materials/Chipmunk/WaveMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/06.Materials/Chipmunk/WaveMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Prefabs/koori/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Prefabs/koori/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.SO/JES/CardSOList.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.SO/JES/CardSOList.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
