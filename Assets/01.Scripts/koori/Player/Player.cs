@@ -89,16 +89,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    // private void FixedUpdate()
-    // {
-    //     _mover.SetMovement(playerInput.InputDirection);
-    // }
-
     public void AddExp(int value)
     {
         _exp += value;
 
-        for (; _exp >= 50; _exp -= 50)
+        for (; _exp >= 30; _exp -= 30)
         {
             Level++;
             levelUpEventChannel.RaiseEvent(Level);
