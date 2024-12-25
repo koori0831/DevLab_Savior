@@ -16,7 +16,7 @@ public class MoveModerator : EventModerator<MoveModerator>
     }
     protected override void Excute()
     {
-        Vector2 moveVector = addToVelocity ? rigidCompo.velocity + moveDirection * MoveSpeed : moveDirection * MoveSpeed;
+        Vector2 moveVector = addToVelocity ? rigidCompo.linearVelocity + moveDirection * MoveSpeed : moveDirection * MoveSpeed;
         rigidCompo.linearVelocity = moveVector;
     }
 }

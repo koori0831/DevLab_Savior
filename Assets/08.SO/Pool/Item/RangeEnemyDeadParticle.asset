@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbf29d706103404e985e966fd40482b, type: 3}
   m_Name: RangeEnemyDeadParticle
   m_EditorClassIdentifier: 
-  poolName: 
-  prefab: {fileID: 0}
-  count: 0
+  poolName: RangeEnemyDeadParticle
+  prefab: {fileID: 6581270621831075426, guid: 8b9c98471a6cbd3419feb47839f2d3f6, type: 3}
+  count: 50

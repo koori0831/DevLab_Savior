@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbf29d706103404e985e966fd40482b, type: 3}
   m_Name: MeleeEnemyDeadParticle
   m_EditorClassIdentifier: 
-  poolName: 
-  prefab: {fileID: 0}
-  count: 0
+  poolName: MeleeEnemyDeadParticle
+  prefab: {fileID: 6581270621831075426, guid: 4a1af59179a110340a45ae98950fd144, type: 3}
+  count: 50
