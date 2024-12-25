@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6218323872766311719}
   - component: {fileID: 5747656872426475365}
   - component: {fileID: 1330294199185656042}
-  - component: {fileID: 6651099423666007689}
   m_Layer: 22
   m_Name: ReflectionEnemyDeadParticle
   m_TagString: Untagged
@@ -223,8 +222,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0.6891391, b: 0.43529415, a: 1}
-      maxColor: {r: 1, g: 0.39220574, b: 0, a: 1}
+      minColor: {r: 1, g: 0.435849, b: 0.435849, a: 1}
+      maxColor: {r: 1, g: 0, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4839,7 +4838,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4892,16 +4891,3 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &6651099423666007689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6581270621831075426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 527aedcd74cbe334a8a1a7abb8725867, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _poolName: ReflectionEnemyDeadParticle

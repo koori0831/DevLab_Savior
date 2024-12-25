@@ -45,6 +45,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _exp: {fileID: 5481846840589230368, guid: f75e74b973aa87148afb099a50745102, type: 3}
-  expDropCount: 5
-  expDropMinForce: 22
-  expDropMaxForce: 30

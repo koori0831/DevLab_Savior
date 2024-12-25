@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolName: EnemyBullet
   prefab: {fileID: 424043395205505943, guid: e6c3484a44787274799ccb0faac8286d, type: 3}
-  count: 5
+  count: 50

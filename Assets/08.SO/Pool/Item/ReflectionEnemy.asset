@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolName: ReflectionEnemy
   prefab: {fileID: 5533069676408997605, guid: 5ce62e57a90dcd04fbeb7a677c8e4bc1, type: 3}
-  count: 5
+  count: 50

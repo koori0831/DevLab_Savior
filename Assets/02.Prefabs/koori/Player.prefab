@@ -119,12 +119,11 @@ MonoBehaviour:
   stopGameEventChannel: {fileID: 11400000, guid: e84b6b0c882cb0b45beb148113de35d0, type: 2}
   levelUpEventChannel: {fileID: 11400000, guid: bb2368f45a465294e8e7aeec9daa7c11, type: 2}
   playerInput: {fileID: 11400000, guid: b5da54caf082f2c41b48befd381a6f0b, type: 2}
-  expAdded: 2
+  expAdded: 10
   expLayer:
     serializedVersion: 2
     m_Bits: 1024
   expDetectRange: 0.5
-  expCollectRange: 1.5
   expBar: {fileID: 0}
   GetExpEvent:
     m_PersistentCalls:

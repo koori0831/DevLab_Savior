@@ -19,14 +19,13 @@ public class Player : MonoBehaviour
 
     [SerializeField] LayerMask expLayer;
     [SerializeField] float expDetectRange;
-    [SerializeField] float expCollectRange = 1.5f;
 
     public int Level { get; private set; }
     private int _exp;
 
     [SerializeField] private Image expBar;
     [SerializeField] private UnityEvent GetExpEvent;
-
+    
     private PlayerMover _mover;
     private PlayerShield _shield;
 
@@ -42,10 +41,10 @@ public class Player : MonoBehaviour
         findPlayerEvent.OnEventRaised += HandleFindPlayerEvent;
         playerInput.AttackEvent.OnvalueChanged += HandleAttackEvent;
         stopGameEventChannel.OnValueEvent += StopGameEventHandle;
-
+        
         _mover = GetComponent<PlayerMover>();
         _shield = GetComponentInChildren<PlayerShield>(true);
-
+        
         playerInput.InputDirection.OnvalueChanged += OnMove;
     }
 
@@ -85,21 +84,14 @@ public class Player : MonoBehaviour
     {
         playerPosEvent.RaiseEvent(transform);
     }
-    private void FixedUpdate()
+    private void Update()
     {
-        Collider2D[] expArray = Physics2D.OverlapCircleAll(transform.position, expCollectRange, expLayer);
-        foreach (Collider2D exp in expArray)
+        Collider2D exp = Physics2D.OverlapCircle(transform.position, expDetectRange, expLayer);
+        if (exp != null)
         {
-            if (Vector2.Distance(transform.position, exp.transform.position) < expDetectRange)
-            {
-                GetExpEvent?.Invoke();
-                Destroy(exp.gameObject);
-                AddExp(expAdded);
-            }
-            else
-            {
-                exp.GetComponent<Rigidbody2D>().AddForce((transform.position - exp.transform.position).normalized * 5);
-            }
+            GetExpEvent?.Invoke();
+            Destroy(exp.gameObject);
+            AddExp(expAdded);
         }
     }
 
