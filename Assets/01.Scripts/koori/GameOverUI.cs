@@ -9,8 +9,7 @@ public class GameOverUI : MonoBehaviour
     [SerializeField] private RectTransform menu;
     private RectTransform gameoverWindow;
     private CanvasGroup gameoverAlpha;
-    [SerializeField] UnityEvent onUIDraw;
-
+    public UnityEvent onGameOver;
     private void Awake()
     {
         gameoverWindow = GetComponent<RectTransform>();
@@ -27,7 +26,7 @@ public class GameOverUI : MonoBehaviour
 
     public void PopUp()
     {
-        onUIDraw?.Invoke();
+       onGameOver.Invoke();
       
         gameoverWindow.gameObject.SetActive(true);
 
