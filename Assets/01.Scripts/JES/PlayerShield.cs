@@ -18,6 +18,20 @@ public class PlayerShield : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        if(!other.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(other.gameObject);
+        }
+        if(_isKeep) return;
+        gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(!other.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(other.gameObject);
+        }
         if(_isKeep) return;
         gameObject.SetActive(false);
     }
