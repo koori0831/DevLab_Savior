@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4304747544347428343}
   - component: {fileID: 7609582431298101841}
   - component: {fileID: 4409440987324628635}
-  m_Layer: 9
+  m_Layer: 20
   m_Name: ShockWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}

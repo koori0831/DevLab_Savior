@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &274539622079208737
+--- !u!1 &3061158847701050925
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6362202155772921365}
-  - component: {fileID: 379718810390964643}
+  - component: {fileID: 2309951187664400581}
+  - component: {fileID: 2661104879511395575}
   m_Layer: 0
   m_Name: WallLight
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6362202155772921365
+--- !u!4 &2309951187664400581
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274539622079208737}
+  m_GameObject: {fileID: 3061158847701050925}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,13 +32,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3673481179601577156}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &379718810390964643
+--- !u!114 &2661104879511395575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274539622079208737}
+  m_GameObject: {fileID: 3061158847701050925}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
@@ -84,7 +84,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &504946714114957767
+--- !u!1 &4129094354431614660
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,8 +92,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6411819249161723695}
-  - component: {fileID: 5634208416878323244}
+  - component: {fileID: 7668009069358868033}
+  - component: {fileID: 8894531198612474088}
   m_Layer: 8
   m_Name: OnCollision
   m_TagString: Untagged
@@ -101,13 +101,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6411819249161723695
+--- !u!4 &7668009069358868033
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504946714114957767}
+  m_GameObject: {fileID: 4129094354431614660}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -116,22 +116,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3673481179601577156}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5634208416878323244
+--- !u!114 &8894531198612474088
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504946714114957767}
+  m_GameObject: {fileID: 4129094354431614660}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e55577745a884a4e8129865679d0586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBody: {fileID: 4951753224662305425}
   screenWavePref: {fileID: 4409440987324628635, guid: aff3546df9fd67748924fe6431715d95, type: 3}
-  strength: 0.12
-  duration: 0.5
+  strength: 1
+  duration: 1
 --- !u!1 &6696494148564015564
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,8 +166,8 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1173548145623898293}
-  - {fileID: 6362202155772921365}
-  - {fileID: 6411819249161723695}
+  - {fileID: 2309951187664400581}
+  - {fileID: 7668009069358868033}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6247658131616361819
@@ -319,7 +318,7 @@ MonoBehaviour:
   collisionEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5634208416878323244}
+      - m_Target: {fileID: 8894531198612474088}
         m_TargetAssemblyTypeName: ShockWavePlayer, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1

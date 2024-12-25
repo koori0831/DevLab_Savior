@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 019d7d10b866a16418f92046477c502f, type: 3}
-  m_Name: RangeEnemy
+  m_Script: {fileID: 11500000, guid: dcbf29d706103404e985e966fd40482b, type: 3}
+  m_Name: Exp
   m_EditorClassIdentifier: 
-  enemyName: RangeEnemy
+  poolName: Exp
+  prefab: {fileID: 0}
+  count: 50

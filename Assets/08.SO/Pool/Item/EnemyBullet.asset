@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dffa7b7f093cff84cac7a6407ba7426f, type: 3}
-  m_Name: EnemyKindList
+  m_Script: {fileID: 11500000, guid: dcbf29d706103404e985e966fd40482b, type: 3}
+  m_Name: EnemyBullet
   m_EditorClassIdentifier: 
-  enemyKindList:
-  - {fileID: 11400000, guid: cee3a5a72e1a74c4e87660074ee906d7, type: 2}
+  poolName: EnemyBullet
+  prefab: {fileID: 424043395205505943, guid: e6c3484a44787274799ccb0faac8286d, type: 3}
+  count: 50

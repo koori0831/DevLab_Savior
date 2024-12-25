@@ -5,28 +5,40 @@ public class DynamicEnemy : Enemy
 {
     [SerializeField] private float _speed;
 
+    private Vector2 _beforeVelocity;
+
     public UnityEvent OnReflectionEvent;
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void Awake()
     {
-        if (collision.gameObject.layer != 8)
+        base.Awake();
+
+        stopGameChannel.OnValueEvent += StopGame;
+    }
+
+    protected override void Contact()
+    {
+        Vector2 dir = (Vector2)player.transform.position  - (Vector2)transform.position;
+
+        RigidCompo.linearVelocity = dir.normalized * _speed;
+    }
+
+    private void StopGame(bool value)
+    {
+        if (value)
         {
-            if (_isDead == false)
-            {
-                DirectionToTarget(_player.transform.position);
-            }
+            _beforeVelocity = RigidCompo.linearVelocity;
+            RigidCompo.linearVelocity = Vector2.zero;
         }
         else
         {
-            SetDead();
+            RigidCompo.linearVelocity = _beforeVelocity;
         }
     }
 
-    public void DirectionToTarget(Vector2 target)
+    protected override void OnDestroy()
     {
-        Vector2 dir = target - (Vector2)transform.position;
-
-        RigidCompo.linearVelocity = dir.normalized * _speed;
+        base.OnDestroy();
+        stopGameChannel.OnValueEvent -= StopGame;
     }
 }

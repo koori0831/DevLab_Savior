@@ -1,15 +1,23 @@
+using DG.Tweening;
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private EnemyKindListSO _enemyKindList;
-
+    [SerializeField] private Vector2 _enemySpawnArea;
+    [SerializeField] private Vector2 _staticEnemyArea;
     [SerializeField] private float _spawnCoolTime;
+    [SerializeField] private float _movePower;
 
-    private Camera _cam;
+    [SerializeField] private BoolEventChannelSO _forcePush;
+
+    public List<GameObject> _enemyList = new();
+
+    private List<IPoolable> _poolables;
 
     private float _right;
     private float _left;
@@ -20,14 +28,16 @@ public class Spawner : MonoBehaviour
 
     private void Awake()
     {
-        _cam = Camera.main;
+        _right = _enemySpawnArea.x / 2;
+        _left = -(_enemySpawnArea.x / 2);
+        _up = _enemySpawnArea.y / 2;
+        _down = -(_enemySpawnArea.y / 2);
 
-        _right = _cam.ViewportToWorldPoint(Vector2.one).x;
-        _left = _cam.ViewportToWorldPoint(Vector2.zero).x;
-        _up = _cam.ViewportToWorldPoint(Vector2.one).y;
-        _down = _cam.ViewportToWorldPoint(Vector2.zero).y;
+        _poolables = _enemyList.Select(item => item.GetComponent<IPoolable>())
+            .Where(component => component != null)
+            .ToList();
 
-        _enemiesCnt = _enemyKindList.enemyKindList.Count;
+        _enemiesCnt = _enemyList.Count;
     }
 
     private void Start()
@@ -35,6 +45,10 @@ public class Spawner : MonoBehaviour
         StartCoroutine(SpawnCoroutine());
     }
 
+    private void OnDestroy()
+    {
+        _forcePush.RaiseEvent(false);
+    }
     private IEnumerator SpawnCoroutine()
     {
         while (true)
@@ -74,25 +88,37 @@ public class Spawner : MonoBehaviour
         Vector2 position = new Vector2(x, y);
 
         int idx = Random.Range(0, _enemiesCnt);
-        string enemyTypeName = _enemyKindList.enemyKindList[idx].enemyName;
+        string enemyTypeName = _poolables[idx].PoolName;
 
         Enemy enemy = PoolManager.Instance.Pop(enemyTypeName) as Enemy;
         enemy.SetPosition(position);
 
         if (enemy.TryGetComponent(out StaticEnemy staticEnemy))
         {
-            position.x = Random.Range(_left + 2.25f, _right - 2.25f);
-            position.y = Random.Range(_down + 2.25f, _up - 2.25f);
-            staticEnemy.MoveToPos(position);
+            staticEnemy.SetAble(false);
+            staticEnemy.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+
+            position.x = Random.Range(-(_staticEnemyArea.x / 2), _staticEnemyArea.x / 2);
+            position.y = Random.Range(-(_staticEnemyArea.y / 2), _staticEnemyArea.y / 2);
+
+            float distance = Vector2.Distance(staticEnemy.transform.position, position);
+            float duration = distance / _movePower;
+
+            DOTween.Sequence().Append(staticEnemy.transform.DOMove(position, duration)).Join(staticEnemy.transform.DOScale(Vector3.one, duration))
+                .OnComplete(() =>
+                {
+                    staticEnemy.SetAble(true);
+                    Debug.Log("°ø°Ý ¿Â");
+                });
         }
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position, new Vector2(_right - _left, _up - _down));
+        Gizmos.DrawWireCube(transform.position, _enemySpawnArea);
         Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(transform.position, new Vector2((_right - _left) - 4.5f, (_up - _down) - 4.5f));
+        Gizmos.DrawWireCube(transform.position, _staticEnemyArea);
         Gizmos.color = Color.white;
     }
 }

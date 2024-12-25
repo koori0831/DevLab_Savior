@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbf29d706103404e985e966fd40482b, type: 3}
   m_Name: RangeEnemy
   m_EditorClassIdentifier: 
-  poolName: MeleeEnemy
-  prefab: {fileID: 4607998919464924929, guid: 8be14f5a77759754f877f00677ef938e, type: 3}
+  poolName: RangeEnemy
+  prefab: {fileID: 6820887067359435551, guid: 88a2a20d4ec970b489b5a85d0348bb29, type: 3}
   count: 50
