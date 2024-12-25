@@ -17,11 +17,11 @@ public class GameOverUI : MonoBehaviour
     }
     public void GameOver()
     {
-       FadeManager.Instance.FadeSceneChange(SceneManager.GetActiveScene(),1);
+       FadeManager.Instance.FadeSceneChange(SceneManager.GetActiveScene().name,1);
     }
     public void MainMenu()
     {
-        FadeManager.Instance.FadeSceneChange(SceneManager.GetSceneByName("Tild"), 1);
+        FadeManager.Instance.FadeSceneChange("StartScene", 1);
     }
 
     public void PopUp()
