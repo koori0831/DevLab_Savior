@@ -36,11 +36,11 @@ public class FadeManager : MonoSingleton<FadeManager>
         fadeImage.DOFade(0, time);
     }
 
-    public void FadeSceneChange(Scene scene, float time)
+    public void FadeSceneChange(string SceneName, float time)
     {
         fadeImage.DOFade(1, time).OnComplete(() =>
         {
-            SceneManager.LoadScene(scene.name);
+            SceneManager.LoadScene(SceneName);
         });
     }
 }
