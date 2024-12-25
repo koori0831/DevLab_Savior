@@ -119,6 +119,12 @@ public class Player : MonoBehaviour
         else playerInput.Controls.Disable();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bullet") || collision.CompareTag("Enemy"))
+            GameOver();
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
