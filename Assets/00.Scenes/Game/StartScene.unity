@@ -480,7 +480,6 @@ GameObject:
   - component: {fileID: 81198443}
   - component: {fileID: 81198442}
   - component: {fileID: 81198441}
-  - component: {fileID: 81198440}
   m_Layer: 5
   m_Name: QUITBtn
   m_TagString: Untagged
@@ -508,27 +507,6 @@ RectTransform:
   m_AnchoredPosition: {x: 355, y: -191}
   m_SizeDelta: {x: 189.47, y: 86.51}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &81198440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81198438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onlyPlayOnce: 0
-  _playOnEnable: 1
-  _stopOnDisable: 0
-  _overrideFadeOut: -1
-  _sound:
-    ID: 1073741837
-    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
-    <DebugObject>k__BackingField: {fileID: 81198438}
-  _positionMode: 0
 --- !u!114 &81198441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,12 +534,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSound:
-    ID: 0
-    _sourceAsset: {fileID: 0}
+    ID: 1073741839
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
     <DebugObject>k__BackingField: {fileID: 81198438}
   clickSound:
-    ID: 0
-    _sourceAsset: {fileID: 0}
+    ID: 1073741840
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
     <DebugObject>k__BackingField: {fileID: 81198438}
 --- !u!114 &81198443
 MonoBehaviour:
@@ -1926,7 +1904,6 @@ GameObject:
   - component: {fileID: 568456107}
   - component: {fileID: 568456106}
   - component: {fileID: 568456105}
-  - component: {fileID: 568456104}
   - component: {fileID: 568456103}
   m_Layer: 5
   m_Name: RankingBtn
@@ -1969,27 +1946,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _open: {fileID: 866177114}
   _close: {fileID: 1534370582}
---- !u!114 &568456104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568456101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onlyPlayOnce: 0
-  _playOnEnable: 0
-  _stopOnDisable: 0
-  _overrideFadeOut: -1
-  _sound:
-    ID: 1073741837
-    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
-    <DebugObject>k__BackingField: {fileID: 568456101}
-  _positionMode: 0
 --- !u!114 &568456105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2003,13 +1959,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSound:
-    ID: 0
-    _sourceAsset: {fileID: 0}
-    <DebugObject>k__BackingField: {fileID: 568456101}
+    ID: 1073741839
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
+    <DebugObject>k__BackingField: {fileID: 81198438}
   clickSound:
-    ID: 0
-    _sourceAsset: {fileID: 0}
-    <DebugObject>k__BackingField: {fileID: 568456101}
+    ID: 1073741840
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
+    <DebugObject>k__BackingField: {fileID: 81198438}
 --- !u!114 &568456106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2232,7 +2188,6 @@ GameObject:
   - component: {fileID: 710622033}
   - component: {fileID: 710622032}
   - component: {fileID: 710622031}
-  - component: {fileID: 710622030}
   m_Layer: 5
   m_Name: QUITBtn
   m_TagString: Untagged
@@ -2260,27 +2215,6 @@ RectTransform:
   m_AnchoredPosition: {x: -302.16, y: -270.45392}
   m_SizeDelta: {x: 189.47, y: 86.51}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &710622030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710622028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onlyPlayOnce: 0
-  _playOnEnable: 0
-  _stopOnDisable: 0
-  _overrideFadeOut: -1
-  _sound:
-    ID: 1073741837
-    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
-    <DebugObject>k__BackingField: {fileID: 710622028}
-  _positionMode: 0
 --- !u!114 &710622031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2294,12 +2228,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSound:
-    ID: 0
-    _sourceAsset: {fileID: 0}
+    ID: 1073741839
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
     <DebugObject>k__BackingField: {fileID: 710622028}
   clickSound:
-    ID: 0
-    _sourceAsset: {fileID: 0}
+    ID: 1073741840
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
     <DebugObject>k__BackingField: {fileID: 710622028}
 --- !u!114 &710622032
 MonoBehaviour:
@@ -2382,7 +2316,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 396109946}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 816795156}
+        m_TargetAssemblyTypeName: GameStart, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &816795149
 GameObject:
   m_ObjectHideFlags: 0
@@ -2396,7 +2342,7 @@ GameObject:
   - component: {fileID: 816795154}
   - component: {fileID: 816795153}
   - component: {fileID: 816795152}
-  - component: {fileID: 816795151}
+  - component: {fileID: 816795156}
   m_Layer: 5
   m_Name: StartBtn
   m_TagString: Untagged
@@ -2424,27 +2370,6 @@ RectTransform:
   m_AnchoredPosition: {x: -301.29996, y: -8.8027935}
   m_SizeDelta: {x: 191.2, y: 86.51}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &816795151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816795149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onlyPlayOnce: 0
-  _playOnEnable: 0
-  _stopOnDisable: 0
-  _overrideFadeOut: -1
-  _sound:
-    ID: 1073741837
-    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
-    <DebugObject>k__BackingField: {fileID: 816795149}
-  _positionMode: 0
 --- !u!114 &816795152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2458,12 +2383,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSound:
-    ID: 0
-    _sourceAsset: {fileID: 0}
+    ID: 1073741839
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
     <DebugObject>k__BackingField: {fileID: 816795149}
   clickSound:
-    ID: 0
-    _sourceAsset: {fileID: 0}
+    ID: 1073741840
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
     <DebugObject>k__BackingField: {fileID: 816795149}
 --- !u!114 &816795153
 MonoBehaviour:
@@ -2546,7 +2471,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1130204275}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 816795156}
+        m_TargetAssemblyTypeName: GameStart, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &816795156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816795149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a19202bccc08841be1f52886576be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &834350287
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,7 +2738,6 @@ GameObject:
   - component: {fileID: 896843092}
   - component: {fileID: 896843091}
   - component: {fileID: 896843090}
-  - component: {fileID: 896843089}
   m_Layer: 5
   m_Name: SettingBtn
   m_TagString: Untagged
@@ -2817,27 +2765,6 @@ RectTransform:
   m_AnchoredPosition: {x: -257.02997, y: -183.4539}
   m_SizeDelta: {x: 279.74, y: 86.51}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &896843089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896843087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onlyPlayOnce: 0
-  _playOnEnable: 0
-  _stopOnDisable: 0
-  _overrideFadeOut: -1
-  _sound:
-    ID: 1073741837
-    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
-    <DebugObject>k__BackingField: {fileID: 896843087}
-  _positionMode: 0
 --- !u!114 &896843090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2865,12 +2792,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSound:
-    ID: 0
-    _sourceAsset: {fileID: 0}
+    ID: 1073741839
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
     <DebugObject>k__BackingField: {fileID: 896843087}
   clickSound:
-    ID: 0
-    _sourceAsset: {fileID: 0}
+    ID: 1073741840
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
     <DebugObject>k__BackingField: {fileID: 896843087}
 --- !u!114 &896843092
 MonoBehaviour:
@@ -5215,7 +5142,6 @@ GameObject:
   - component: {fileID: 2126266769}
   - component: {fileID: 2126266768}
   - component: {fileID: 2126266767}
-  - component: {fileID: 2126266766}
   m_Layer: 5
   m_Name: QUITBtn
   m_TagString: Untagged
@@ -5243,27 +5169,6 @@ RectTransform:
   m_AnchoredPosition: {x: 307, y: -231.5}
   m_SizeDelta: {x: 189.47, y: 86.51}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2126266766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126266764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onlyPlayOnce: 0
-  _playOnEnable: 1
-  _stopOnDisable: 0
-  _overrideFadeOut: -1
-  _sound:
-    ID: 1073741837
-    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
-    <DebugObject>k__BackingField: {fileID: 2126266764}
-  _positionMode: 0
 --- !u!114 &2126266767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5291,13 +5196,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSound:
-    ID: 0
-    _sourceAsset: {fileID: 0}
-    <DebugObject>k__BackingField: {fileID: 2126266764}
+    ID: 1073741839
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
+    <DebugObject>k__BackingField: {fileID: 81198438}
   clickSound:
-    ID: 0
-    _sourceAsset: {fileID: 0}
-    <DebugObject>k__BackingField: {fileID: 2126266764}
+    ID: 1073741840
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
+    <DebugObject>k__BackingField: {fileID: 81198438}
 --- !u!114 &2126266769
 MonoBehaviour:
   m_ObjectHideFlags: 0
