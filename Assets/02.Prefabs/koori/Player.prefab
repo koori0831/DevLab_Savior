@@ -1,5 +1,66 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &279242255482833673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6406295757211538865}
+  - component: {fileID: 1532962199779483741}
+  - component: {fileID: 5627228989635426461}
+  m_Layer: 7
+  m_Name: GetExpFeedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6406295757211538865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279242255482833673}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5698564485024281032}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1532962199779483741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279242255482833673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9e487d681ccee46add820a2b8bda8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5627228989635426461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279242255482833673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c2dd19ee4067b4ebbb9f88b49db767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundID:
+    ID: 1073741841
+    _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
+    <DebugObject>k__BackingField: {fileID: 279242255482833673}
 --- !u!1 &595522936653424055
 GameObject:
   m_ObjectHideFlags: 0
@@ -35,6 +96,7 @@ Transform:
   - {fileID: 6417881192429391086}
   - {fileID: 426794178659933754}
   - {fileID: 6663934056374466231}
+  - {fileID: 6406295757211538865}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7356334587113868476
@@ -61,6 +123,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   expDetectRange: 0.5
+  GetExpEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1532962199779483741}
+        m_TargetAssemblyTypeName: FeedbackPlayer, Assembly-CSharp
+        m_MethodName: PlayFeedbacks
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   rigidBody: {fileID: 5235839605888427281}
   <bullet>k__BackingField: {fileID: 0}
   moveModerator: {fileID: 11400000, guid: 5425368d99b99224fa252239bc2fb206, type: 2}

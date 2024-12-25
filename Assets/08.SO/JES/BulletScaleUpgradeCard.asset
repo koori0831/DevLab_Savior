@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48a1b72764949d4a8c01254ecbf2584, type: 3}
   m_Name: BulletScaleUpgradeCard
   m_EditorClassIdentifier: 
-  cardIcon: {fileID: 21300000, guid: 758ac31a9bff9ac4181f54de54a6ecb7, type: 3}
-  cardType: {fileID: 11400000, guid: a60f834bfa1bc63498d72f9308f01318, type: 2}
+  cardIcon: {fileID: 21300000, guid: 969a36dfe6f5de546b55c97871ed5d9f, type: 3}
+  cardType: {fileID: 11400000, guid: 58626f100a4cf84459d4e075114a29af, type: 2}
   cardName: "\uCD1D\uC54C\uD06C\uAE30\uC99D\uAC00"
   cardDescription: "\uCD1D\uC54C\uC758 \uD06C\uAE30\uAC00\\n25% \uCEE4\uC9D1\uB2C8\uB2E4."
   upgradeScale: 2

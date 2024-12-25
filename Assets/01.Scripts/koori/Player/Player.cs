@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
@@ -20,7 +21,8 @@ public class Player : MonoBehaviour
     public int Level { get; private set; }
     private int _exp;
 
-
+    [SerializeField] private UnityEvent GetExpEvent;
+    
     private PlayerMover _mover;
     private PlayerShield _shield;
 
@@ -83,6 +85,7 @@ public class Player : MonoBehaviour
         Collider2D exp = Physics2D.OverlapCircle(transform.position, expDetectRange, expLayer);
         if (exp != null)
         {
+            GetExpEvent?.Invoke();
             Destroy(exp.gameObject);
             AddExp(expAdded);
         }
