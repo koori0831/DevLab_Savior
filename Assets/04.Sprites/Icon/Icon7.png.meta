@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: a0644d9b06ff1934d90fcfc09e2f90ad
+guid: 378be90e3df97fb42b8ba1592ca15402
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8527568592950175283
-    second: empty_0
+      213: -4520775617678411216
+    second: Icon7_0
+  - first:
+      213: 8104218482116652223
+    second: Icon7_1
+  - first:
+      213: -7314732566110781545
+    second: Icon7_2
+  - first:
+      213: -3546447668845228613
+    second: Icon7_3
+  - first:
+      213: 3962246102870797025
+    second: Icon7_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,19 +97,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: empty_0
+      name: Icon7_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 16
+        y: 169
+        width: 101
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc95d63bb8df7a980800000000000000
-      internalID: -8527568592950175283
+      spriteID: 03af70f178af241c0800000000000000
+      internalID: -4520775617678411216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon7_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 79
+        width: 94
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbce7b085c7f77070800000000000000
+      internalID: 8104218482116652223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon7_2
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 79
+        width: 93
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f3cf97c79dc7a90800000000000000
+      internalID: -7314732566110781545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon7_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 22
+        width: 101
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbdc7f392ac78cec0800000000000000
+      internalID: -3546447668845228613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon7_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 123
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea2a4276d9bcf630800000000000000
+      internalID: 3962246102870797025
       vertices: []
       indices: 
       edges: []
@@ -151,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      empty_0: -8527568592950175283
+      Icon7_0: -4520775617678411216
+      Icon7_1: 8104218482116652223
+      Icon7_2: -7314732566110781545
+      Icon7_3: -3546447668845228613
+      Icon7_4: 3962246102870797025
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
