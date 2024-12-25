@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 7754048356354031526}
   - component: {fileID: 1027352602419708763}
   - component: {fileID: 1886097534014938266}
+  - component: {fileID: 7181503592376131635}
   m_Layer: 7
   m_Name: DeadFeedback
   m_TagString: Untagged
@@ -283,6 +284,19 @@ MonoBehaviour:
     ID: 1073741838
     _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
     <DebugObject>k__BackingField: {fileID: 871228537985342512}
+--- !u!114 &7181503592376131635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871228537985342512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 358308f0792eda547a45afd9e748e034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effectName: PlayerDeadParticle
 --- !u!1 &2137625815668425506
 GameObject:
   m_ObjectHideFlags: 0

@@ -123,6 +123,8 @@ public class Player : MonoBehaviour
         PlayerControl(false);
         GameManager.Instance.UIManager.GameOverPopup(true);
         gameOverEventChannel.RaiseEvent(true);
+
+        Destroy(gameObject);
     }
 
     public void PlayerControl(bool value)
