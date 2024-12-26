@@ -8,7 +8,7 @@ public class PlayerInputSO : ScriptableSingleton<PlayerInputSO>, Controls.IPlaye
 {
     public NotifyValue<bool> AttackEvent;
 
-    public NotifyValue<Vector2> InputDirection { get; private set; }
+    public NotifyValue<Vector2> InputDirection { get; private set; } = new NotifyValue<Vector2>();
 
     public Controls Controls;
     protected override void OnEnable()

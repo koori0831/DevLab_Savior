@@ -45,7 +45,9 @@ public class RegisterBtn : MonoBehaviour
         // 모든 조건을 만족한 경우 이벤트 실행
         ExecuteEvent();
     }
-
+    public void OnRigisFail(){
+         inputField.text = "등록에 실패했습니다";
+    }
     private void ExecuteEvent()
     {
         OnSuccess.Invoke();

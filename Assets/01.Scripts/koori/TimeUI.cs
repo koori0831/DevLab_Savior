@@ -2,15 +2,14 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public class TimeUI : MonoBehaviour
+public class TimeUI : MonoSingleton<TimeUI>
 {
     [SerializeField] private BoolEventChannelSO stopEvent;
     private TMP_Text _text;
-    private float _sec;
-    private int _min;
+    public float _sec;
+    public int _min;
     private bool _stop;
-
-    private void Awake()
+    protected override void Awake()
     {
         _text = GetComponent<TMP_Text>();
         stopEvent.OnValueEvent += (bool value) => { _stop = value; };

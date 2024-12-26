@@ -1961,11 +1961,11 @@ MonoBehaviour:
   hoverSound:
     ID: 1073741839
     _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
-    <DebugObject>k__BackingField: {fileID: 81198438}
+    <DebugObject>k__BackingField: {fileID: 568456101}
   clickSound:
     ID: 1073741840
     _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
-    <DebugObject>k__BackingField: {fileID: 81198438}
+    <DebugObject>k__BackingField: {fileID: 568456101}
 --- !u!114 &568456106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2051,6 +2051,18 @@ MonoBehaviour:
       - m_Target: {fileID: 568456103}
         m_TargetAssemblyTypeName: OpenSetting, Assembly-CSharp
         m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1128121239}
+        m_TargetAssemblyTypeName: LeaderboardUI, Assembly-CSharp
+        m_MethodName: DrawLeaderboard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2724,6 +2736,67 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!1 &876148639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 876148641}
+  - component: {fileID: 876148640}
+  m_Layer: 0
+  m_Name: UGSInitailize
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &876148640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876148639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bd35e1596f6c949a7da71dd5618c54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInitialized:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2121369275}
+        m_TargetAssemblyTypeName: Authentication, Assembly-CSharp
+        m_MethodName: DoAuthAsync
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &876148641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876148639}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.77079093, y: -1.0308973, z: -0.12157416}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 2121369276}
+  - {fileID: 1376341529}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &896843087
 GameObject:
   m_ObjectHideFlags: 0
@@ -3764,6 +3837,54 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1376341528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376341529}
+  - component: {fileID: 1376341530}
+  m_Layer: 0
+  m_Name: leaderBoard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1376341529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376341528}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 876148641}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1376341530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376341528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c53517c02ba4c34f9c1d7a1e73c2fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDontDestroy: 1
+  leaderboardId: ranking
+  playerName: 
+  value: 0
 --- !u!1 &1473295235
 GameObject:
   m_ObjectHideFlags: 0
@@ -5128,6 +5249,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059971811}
   m_CullTransparentMesh: 1
+--- !u!1 &2121369274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2121369276}
+  - component: {fileID: 2121369275}
+  m_Layer: 0
+  m_Name: Auth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2121369275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121369274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab45bb7edc53cb84e8c747d5d51746af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDontDestroy: 1
+  <State>k__BackingField: 0
+  <MaxTryCount>k__BackingField: 23
+  authDuration: 3
+  OnAuthenticated:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &2121369276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121369274}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 876148641}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2126266764
 GameObject:
   m_ObjectHideFlags: 0
@@ -5198,11 +5370,11 @@ MonoBehaviour:
   hoverSound:
     ID: 1073741839
     _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
-    <DebugObject>k__BackingField: {fileID: 81198438}
+    <DebugObject>k__BackingField: {fileID: 2126266764}
   clickSound:
     ID: 1073741840
     _sourceAsset: {fileID: 11400000, guid: 841843e6f34450a4a9f236a020ca4d4b, type: 2}
-    <DebugObject>k__BackingField: {fileID: 81198438}
+    <DebugObject>k__BackingField: {fileID: 2126266764}
 --- !u!114 &2126266769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5341,3 +5513,4 @@ SceneRoots:
   - {fileID: 1237392544}
   - {fileID: 1168512641}
   - {fileID: 572729033}
+  - {fileID: 876148641}
