@@ -16,5 +16,7 @@ MonoBehaviour:
   cardType: {fileID: 11400000, guid: 58626f100a4cf84459d4e075114a29af, type: 2}
   cardName: "\uC801\uC18D\uB3C4\uAC10\uC18C"
   cardDescription: "\uC801\uC758 \uC18D\uB3C4\uAC00 \uAC10\uC18C\uD569\uB2C8\uB2E4."
-  enemyMoveMo: {fileID: 11400000, guid: 1591c535f6c96fc46a0093551c6cadbf, type: 2}
+  enemyMoveMo:
+  - {fileID: 11400000, guid: 1591c535f6c96fc46a0093551c6cadbf, type: 2}
+  - {fileID: 11400000, guid: 5359f44f64581dc4e9e392ecf5c01575, type: 2}
   minusSpeed: 0.9

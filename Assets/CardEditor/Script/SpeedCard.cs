@@ -8,7 +8,7 @@ public class SpeedCard : CardSO
     [SerializeField] float additiveSpeed;
     public override void OnEquip(Player player)
     {
-        moveModerator.onEvent.AddListener(OnMoveEvent);
+        moveModerator.onEvent += OnMoveEvent;
     }
 
     private void OnMoveEvent(MoveModerator arg0)

@@ -298,7 +298,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &1089401067506956464
 CircleCollider2D:
@@ -381,7 +381,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _speed: 6
-  _moveModerator: {fileID: 0}
+  _moveModerator: {fileID: 11400000, guid: 5359f44f64581dc4e9e392ecf5c01575, type: 2}
   OnReflectionEvent:
     m_PersistentCalls:
       m_Calls: []
