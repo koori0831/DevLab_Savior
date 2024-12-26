@@ -45,14 +45,6 @@ public class CardManager : MonoBehaviour
     {
         StartCoroutine(SpawnCo());
     }
-
-    private void Update()
-    {
-        if (Keyboard.current.qKey.wasPressedThisFrame)
-        {
-            LevelUpEventHandle(1);
-        }
-    }
     private IEnumerator SpawnCo()
     {
         _spawnCards.Clear();
