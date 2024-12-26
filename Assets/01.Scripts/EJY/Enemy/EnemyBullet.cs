@@ -34,10 +34,10 @@ public class EnemyBullet : MonoBehaviour, IPoolable
 
     private void Update()
     {
-        if(_isDead) return;
+        if (_isDead) return;
 
-        if(!_isStop)
-        _currentLifeTime += Time.deltaTime;
+        if (!_isStop)
+            _currentLifeTime += Time.deltaTime;
 
         if (_currentLifeTime > _lifeTime)
         {
@@ -46,6 +46,21 @@ public class EnemyBullet : MonoBehaviour, IPoolable
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (_isDead == false)
+        {
+            if (collision.transform.TryGetComponent(out Player player))
+            {
+                player.GameOver();
+                PoolManager.Instance.Push(this);
+            }
+            else if (collision.gameObject.CompareTag("Bullet"))
+            {
+                PoolManager.Instance.Push(this);
+            }
+        }
+    }
 
     private void OnDestroy()
     {
@@ -74,7 +89,7 @@ public class EnemyBullet : MonoBehaviour, IPoolable
         }
     }
 
-    public void SetVelocityAndPosition(Vector2 position,Vector2 velocity)
+    public void SetVelocityAndPosition(Vector2 position, Vector2 velocity)
     {
         transform.position = position;
         _rigidCompo.linearVelocity = velocity;
