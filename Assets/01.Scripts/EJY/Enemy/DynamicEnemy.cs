@@ -28,12 +28,7 @@ public class DynamicEnemy : Enemy
         else
         {
             RigidCompo.linearVelocity = _beforeVelocity;
+            Debug.Log(RigidCompo.linearVelocity);
         }
-    }
-
-    protected override void OnDestroy()
-    {
-        base.OnDestroy();
-        stopGameChannel.OnValueEvent -= StopGame;
     }
 }
