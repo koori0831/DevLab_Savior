@@ -23,10 +23,7 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         PlayerInputSO.Instance.AttackEvent.OnvalueChanged += OnAttack;
-        // attackEventChannel.OnEventRaised += Follow;
         StopEventChannel.OnValueEvent += Stop;
-
-        WindowMove.Move(Screen.mainWindowPosition);
     }
 
     private void OnAttack(bool prev, bool next)
@@ -47,7 +44,6 @@ public class Bullet : MonoBehaviour
     private void OnDestroy()
     {
         PlayerInputSO.Instance.AttackEvent.OnvalueChanged -= OnAttack;
-        // attackEventChannel.OnEventRaised -= Follow;
         StopEventChannel.OnValueEvent -= Stop;
     }
 
