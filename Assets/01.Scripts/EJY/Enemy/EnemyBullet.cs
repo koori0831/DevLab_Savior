@@ -55,6 +55,10 @@ public class EnemyBullet : MonoBehaviour, IPoolable
                 player.GameOver();
                 PoolManager.Instance.Push(this);
             }
+            else if (collision.gameObject.CompareTag("Bullet"))
+            {
+                PoolManager.Instance.Push(this);
+            }
         }
     }
 
