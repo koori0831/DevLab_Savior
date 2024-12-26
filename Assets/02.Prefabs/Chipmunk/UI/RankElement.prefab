@@ -231,9 +231,9 @@ MonoBehaviour:
   m_fontSize: 41
   m_fontSizeBase: 41
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 41
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -368,6 +368,7 @@ MonoBehaviour:
   playerName: {fileID: 6054231863322391617}
   playerScore: {fileID: 432199337667977216}
   playerID: {fileID: 5905265641098084373}
+  playerRank: {fileID: 5683946563487174355}
 --- !u!1 &3418105084588499559
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +499,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 66.17146, w: 0}
+  m_margin: {x: 12.077744, y: 0, z: 66.17146, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -19,10 +19,12 @@ public class LeaderboardUI : MonoBehaviour
 
         ClearChildren(contentsTrm);
 
+        int count = 0;
         foreach (LeaderboardEntry rank in ranks)
         {
+            count++;
             Leaderboard_PlayerUI playerUI = Instantiate(playerUIPrefab, contentsTrm);
-            playerUI.SetPlayerUI(rank.PlayerName, rank.Score.ToString(), rank.PlayerId);
+            playerUI.SetPlayerUI(rank.PlayerName, rank.Score.ToString(), rank.PlayerId, count);
         }
     }
     private void ClearChildren(Transform transform)
