@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class DynamicEnemy : Enemy
 {
     [SerializeField] protected float _speed;
-    [SerializeField] MoveModerator _moveModerator;
+    [SerializeField] protected MoveModerator _moveModerator;
     private Vector2 _beforeVelocity;
 
     public UnityEvent OnReflectionEvent;

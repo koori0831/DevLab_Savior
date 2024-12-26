@@ -18,11 +18,11 @@ public class PlayerShield : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(!other.gameObject.CompareTag("Bullet"))
+        if (!other.gameObject.CompareTag("Bullet")|| other.gameObject.layer == 11)
         {
             Destroy(other.gameObject);
         }
-        if(_isKeep) return;
+        if(_isKeep) return; 
         gameObject.SetActive(false);
     }
 

@@ -12,7 +12,8 @@ public class ReflectionEnemy : DynamicEnemy
         if (_isFirst)
         {
             _isFirst = false;
-            RigidCompo.linearVelocity = (player.transform.position - transform.position).normalized * _speed;
+            _moveModerator.Initialize(RigidCompo, (player.transform.position - transform.position).normalized);
+            _moveModerator.ExecuteEvent();
         }
         else
         {
@@ -24,7 +25,8 @@ public class ReflectionEnemy : DynamicEnemy
 
             Vector2 reflection = velocity + ((2 * hit.normal) * dot);
 
-            RigidCompo.linearVelocity = reflection.normalized * _speed;
+            _moveModerator.Initialize(RigidCompo, reflection.normalized);
+            _moveModerator.ExecuteEvent();
 
             Attack();
         }

@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(menuName = "MoveModerator")]
 public class MoveModerator : EventModerator<MoveModerator>
@@ -13,7 +15,18 @@ public class MoveModerator : EventModerator<MoveModerator>
         this.rigidCompo = rb;
         this.MoveSpeed = moveSpeed + additiveSpeed;
         this.moveDirection = moveDir.normalized;
+
+        SceneManager.sceneLoaded -= OnSceneLoad;
+        SceneManager.sceneLoaded += OnSceneLoad;
     }
+
+    private void OnSceneLoad(Scene arg0, LoadSceneMode arg1)
+    {
+        Debug.Log("Resty");
+        MoveSpeed = 0;
+        onEvent = null;
+    }
+
     protected override void Excute()
     {
         Vector2 moveVector = addToVelocity ? rigidCompo.linearVelocity + moveDirection * MoveSpeed : moveDirection * MoveSpeed;
