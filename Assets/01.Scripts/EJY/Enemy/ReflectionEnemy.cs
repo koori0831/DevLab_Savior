@@ -48,10 +48,4 @@ public class ReflectionEnemy : DynamicEnemy
         base.ResetItem();
         _isFirst = true;
     }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, RigidCompo.linearVelocity);  
-    }
 }
