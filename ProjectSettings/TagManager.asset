@@ -2,8 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -11,6 +13,12 @@ TagManager:
   - 
   - Water
   - UI
+  - Wall
+  - Player
+  - Bullet
+  - Enemy
+  - Exp
+  - EnemyBullet
   - 
   - 
   - 
@@ -21,13 +29,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Effect
   - 
   - 
   - 
@@ -38,6 +40,26 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 1673599183
+    locked: 0
+  - name: Wall
+    uniqueID: 2209093969
+    locked: 0
+  - name: Bullet
+    uniqueID: 1877241293
+    locked: 0
+  - name: Player
+    uniqueID: 1402236681
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Effect
+    uniqueID: 901339373
+    locked: 0
+  - name: UI
+    uniqueID: 79432669
+    locked: 0
+  m_RenderingLayers:
+  - Default

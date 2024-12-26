@@ -1,3 +1,5 @@
+
+
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -60,11 +62,8 @@ namespace Chipmunk.Library
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         public void Initialize()
         {
-            if (Instance != null)
-            {
-                Debug.LogWarning("Singleton<" + typeof(T).Name + "> is already set \n maybe you have to destroy it first");
-            }
-            Instance = this as T;
+            if (Instance == null)
+                Instance = this as T;
         }
 
 

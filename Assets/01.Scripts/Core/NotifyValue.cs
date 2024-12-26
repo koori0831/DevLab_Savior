@@ -30,4 +30,5 @@ public class NotifyValue<T>
     {
         _value = value;
     }
+
 }
